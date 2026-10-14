@@ -32,6 +32,30 @@
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
   }
+  /* ---------- Phone menu ---------- */
+  var menuBtn = document.querySelector('[data-menu]');
+  var nav = document.getElementById('site-nav');
+  if (menuBtn && nav) {
+    var setMenu = function (open) {
+      nav.classList.toggle('is-open', open);
+      menuBtn.setAttribute('aria-expanded', String(open));
+    };
+    menuBtn.addEventListener('click', function () { setMenu(!nav.classList.contains('is-open')); });
+    nav.addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
+  }
+
+  /* ---------- What we make: filter by line of work ---------- */
+  var chips = document.querySelectorAll('[data-filter]');
+  var items = document.querySelectorAll('.bom__item');
+  chips.forEach(function (chip) {
+    chip.addEventListener('click', function () {
+      var f = chip.getAttribute('data-filter');
+      chips.forEach(function (c) { c.setAttribute('aria-pressed', String(c === chip)); });
+      items.forEach(function (it) { it.hidden = !(f === 'all' || it.getAttribute('data-v') === f); });
+    });
+  });
+
   var year = document.querySelector('[data-year]');
   if (year) year.textContent = String(new Date().getFullYear());
 
