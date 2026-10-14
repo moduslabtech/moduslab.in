@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>MediStock Clinic – Privacy Policy</title>
+<style>
+  :root { --teal:#0d9488; --navy:#0f172a; --muted:#475569; --bg:#f8fafc; }
+  body { margin:0; background:var(--bg); color:var(--navy); font:16px/1.6 -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+  main { max-width:760px; margin:0 auto; padding:32px 16px 64px; }
+  h1 { color:var(--teal); margin-bottom:4px; } h2 { margin-top:32px; font-size:20px; }
+  p, li { color:#1e293b; } .muted { color:var(--muted); }
+  table { width:100%; border-collapse:collapse; margin:12px 0; } td, th { border:1px solid #e2e8f0; padding:8px; text-align:left; vertical-align:top; }
+  th { background:#f1f5f9; }
+</style>
+</head>
+<body><main>
+<h1>MediStock Clinic: Privacy Policy</h1>
+<p class="muted">Last updated: 14 October 2026</p>
+
+<p>MediStock Clinic ("the app") helps small clinics manage their in-house pharmacy: stock, bills, prescriptions and patient records. It is provided by ModusLab ("we", "us"). This policy explains what data the app handles, why, and the choices you have. It is written to meet the Google Play User Data policy and India's Digital Personal Data Protection Act, 2023.</p>
+
+<h2>Who controls the data</h2>
+<p>Each clinic that uses the app decides what patient information to enter and is responsible for it (the clinic is the "data fiduciary" for its patients). We store and process that information only to provide the app to the clinic.</p>
+
+<h2>What we collect</h2>
+<table>
+<tr><th>Data</th><th>Examples</th><th>Why</th></tr>
+<tr><td>Account details</td><td>Email address, password (stored only as a secure hash), role (owner or assistant), personal app preferences (for example, whether the out-of-stock alert is shown)</td><td>Sign-in, password reset, team invitations, remembering your settings on any phone</td></tr>
+<tr><td>Clinic profile</td><td>Clinic name, address, phone, doctor names, qualifications and registration numbers, GSTIN, UPI ID, default consultation fee, the email address chosen for the daily summary</td><td>Printed on bills and reports; sending the daily summary</td></tr>
+<tr><td>Patient information entered by the clinic</td><td>Name, mobile number, age, gender, allergies, conditions, doctor's notes, the consulting doctor, medicines given, dosage and number of days, prescription photos</td><td>Billing, prescriptions, visit history, allergy warnings and refill reminders</td></tr>
+<tr><td>Test reports (only when you add them)</td><td>Report date, test results and normal ranges, lab name, reviewing doctor, photo or lab PDF</td><td>The patient's record and result trends over time</td></tr>
+<tr><td>Business records</td><td>Medicines and their composition, batches, expiry dates, prices, stock changes, bills, consultation fees, payment mode, imported stock lists</td><td>Inventory, billing, reports and order suggestions</td></tr>
+<tr><td>Activity log</td><td>Who did what and when in the clinic (for example "bill created", "stock restocked"), with the team member's email</td><td>Lets the clinic owner review changes and keep the clinic accountable</td></tr>
+<tr><td>Email-domain requests (only if a clinic asks to use its own email domain)</td><td>Clinic name, email, mobile number and one document (registration or GST certificate)</td><td>Checking the clinic is genuine; only the developer sees it, and the document is deleted 30 days after the decision</td></tr>
+<tr><td>Error reports</td><td>Error message, screen, app version and Android version (phone numbers and emails masked; no patient details)</td><td>Finding and fixing problems</td></tr>
+<tr><td>Purchases</td><td>Plan, renewal date and a purchase reference from Google Play (never card or UPI details)</td><td>Unlocking Pro and keeping it when you reinstall or change phone</td></tr>
+</table>
+<p>The camera is used only when you scan a barcode or photograph a prescription or report. Photos are reduced in size on the phone before upload to save space, keeping them readable. Phone notifications (expiry, low stock, trial reminders) are created on the phone itself. We do not collect location, contacts, call logs, advertising IDs or browsing data. The app has no ads and no analytics trackers.</p>
+
+<h2>Suggestions the app learns</h2>
+<p>To save time, the app learns from the clinic's own records: each doctor's usual prescriptions and dosages, medicines often given together, how fast stock sells and how the clinic orders, and when a regular patient's medicine is likely to run out. This learning happens only inside that clinic's data. It is never shared with other clinics and never used to train outside AI models. Suggestions and allergy warnings are prompts only; the doctor or pharmacist always decides, and the app is not a substitute for professional judgement.</p>
+
+<h2>Where it is stored</h2>
+<p>Data is stored with our hosting provider Supabase on servers in Mumbai, India, encrypted in transit (HTTPS) and at rest. Each clinic's data is isolated: only signed-in members of that clinic can read or change it, and some screens (Reports, Settings, Activity log) are for the clinic owner only. Some data (stock list, a bill being prepared, bills waiting to sync) is also kept on the phone so the app works without internet.</p>
+
+<h2>Who we share it with</h2>
+<p>We do not sell or rent data, and we do not share it for advertising. We use these service providers only to run the app:</p>
+<ul>
+<li><b>Supabase</b>: database, sign-in and file storage (India region).</li>
+<li><b>Resend</b>: sending sign-in and password-reset codes and the optional daily summary email.</li>
+<li><b>Google Play and RevenueCat</b>: processing and tracking Pro purchases. RevenueCat receives only a random clinic ID, not names, emails or patient data.</li>
+<li><b>Expo</b>: building and delivering app updates, and hosting this page.</li>
+<li><b>GitHub</b>: storing encrypted backups (database nightly, photos weekly). Only we hold the key; GitHub cannot read them.</li>
+</ul>
+<p>When you tap <i>WhatsApp</i> or <i>Share</i> (bills, prescriptions, photos, reports or refill reminders), the content is handed to the app you choose (for example WhatsApp) and sent from your own account; that app's privacy policy applies.</p>
+
+<h2>Linking with FamilyMeds</h2>
+<p>A clinic can send a prescription to the patient's FamilyMeds app (also made by ModusLab) so medicine reminders start automatically. Nothing is shared until the clinic creates a one-time code for that bill and the patient enters it in FamilyMeds with the same mobile number the clinic has. Codes expire after 7 days and lock after 5 wrong tries.</p>
+<ul>
+<li>Once linked, the patient sees the prescriptions shared with them (medicines, dosage, timing, days, instructions and doctor name) and the test reports the clinic added to their record.</li>
+<li>Reports the patient adds in FamilyMeds reach the clinic only if the patient separately turns on sharing. That permission is optional, is asked for on its own and is never a condition for getting reminders.</li>
+<li>The patient can turn sharing off at any time; the clinic stops seeing their reports immediately. Unlinking also deletes every report the patient shared with the clinic. Each link, permission change and shared report is recorded in the clinic's activity log.</li>
+</ul>
+
+<h2>How long we keep it</h2>
+<p>Data is kept while the clinic's account is active. When the clinic owner deletes the account, the clinic and all of its data (stock, bills, patients, test reports, photos, activity log and learned suggestions) are deleted immediately from the live database. When an assistant deletes their account, their login is removed, but the clinic keeps its records, including activity-log entries showing the assistant's email. Backups (by our hosting provider and our own encrypted backups) expire within 30 days. To allow one free Pro trial per person, we keep a one-way fingerprint of the account email (it cannot be turned back into the email) after the account is deleted. Error reports are kept only as long as needed to fix the problem.</p>
+
+<h2>Your choices and rights</h2>
+<ul>
+<li><b>Access and correction:</b> clinic users can view and edit their data in the app.</li>
+<li><b>Export:</b> <i>Account → Export all my data</i> gives every record as spreadsheet files; reports can also be exported as CSV and PDF.</li>
+<li><b>Deletion:</b> in the app, open <i>Account → Delete my account</i>. Or email us (below) from the account's email address and we will delete it within 7 days. See <a href="delete-account">how to delete your account</a>.</li>
+<li><b>Settings you control:</b> the daily summary email, phone notifications, the security PIN and the out-of-stock alert can each be turned on or off.</li>
+<li><b>Patients:</b> to see, correct or delete your information, contact the clinic you visited; we will help the clinic do so.</li>
+</ul>
+
+<h2>Children</h2>
+<p>The app is for clinic staff and is not directed to children. Clinics may record patients of any age as part of their care.</p>
+
+<h2>Security</h2>
+<p>We use encrypted connections, per-clinic access rules enforced by the database, hashed passwords and an optional 6-digit PIN for owner-only screens. The PIN is checked on our server and stored only as a secure hash; after 5 wrong tries it locks for 5 minutes. Sign-up is limited to well-known email providers and approved clinic domains to reduce fake accounts. No system is perfectly secure; please use a strong password and keep your phone locked.</p>
+
+<h2>Changes</h2>
+<p>We will update this page when the app's data practices change and show the new date at the top.</p>
+
+<h2>Contact and grievances</h2>
+<p>ModusLab · Email: <a href="mailto:support@moduslab.in">support@moduslab.in</a>. For questions, requests or complaints about personal data, write to this address and we will reply within 7 days.</p>
+</main></body></html>
