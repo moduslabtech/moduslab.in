@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 40">
+  <style>
+    .k{stroke:#1d1a16} .bg{fill:#fff}
+    @media (prefers-color-scheme: dark){ .k{stroke:#f3efe9} .bg{fill:#141414} }
+  </style>
+  <rect x="2" y="2" width="28" height="24" rx="2" class="bg k" stroke-width="2.6"/>
+  <path d="M9 20V8.5l7 7.5 7-7.5V20" fill="none" class="k" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M16 26v5" class="k" stroke-width="2.6"/>
+  <path d="M10 38h12l-6-7z" fill="#f2b33d" class="k" stroke-width="1.8" stroke-linejoin="round"/>
+</svg>

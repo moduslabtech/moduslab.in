@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Modus Lab · Health apps and engineering software</title>
+<meta name="description" content="Modus Lab is a product studio in Pune, India, with two lines of work: Android apps for clinics and families (MediStock Clinic, FamilyMeds) and engineering software for mechanical engineers (StackSense).">
+<link rel="canonical" href="https://moduslab.in/">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
+<meta name="color-scheme" content="light dark">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Modus Lab">
+<meta property="og:title" content="Modus Lab · Health apps and engineering software">
+<meta property="og:description" content="Android apps for clinics and families. Software for engineers. Made in Pune, India.">
+<meta property="og:url" content="https://moduslab.in/">
+<meta property="og:image" content="https://moduslab.in/assets/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+<link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/styles.css?v=11">
+
+<script>
+  // Apply a saved theme before first paint so the page never flashes the wrong one.
+  try {
+    var t = localStorage.getItem('ml-theme');
+    if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+  } catch (e) {}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Modus Lab",
+  "url": "https://moduslab.in/",
+  "logo": "https://moduslab.in/assets/favicon.svg",
+  "email": "support@moduslab.in",
+  "address": { "@type": "PostalAddress", "addressLocality": "Pune", "addressRegion": "Maharashtra", "addressCountry": "IN" }
+}
+</script>
+</head>
+
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="masthead">
+  <div class="wrap masthead__row">
+    <a class="brand" href="#top" aria-label="Modus Lab, home">
+      <svg class="brand__mark" viewBox="0 0 32 40" aria-hidden="true">
+        <rect x="2" y="2" width="28" height="24" rx="2" class="brand__box"/>
+        <path d="M9 20V8.5l7 7.5 7-7.5V20" class="brand__m"/>
+        <path d="M16 26v5" class="brand__stem"/>
+        <path d="M10 38h12l-6-7z" class="brand__datum"/>
+      </svg>
+      <span class="brand__word">Modus Lab</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#apps"><span class="navtag">A</span>Health apps</a>
+      <a href="#engineering"><span class="navtag">B</span>Engineering</a>
+      <a href="#principles">How we build</a>
+      <a href="#about">About</a>
+    </nav>
+    <div class="masthead__actions">
+      <button class="theme-toggle" type="button" aria-label="Switch to dark theme" data-theme-toggle>
+        <svg viewBox="0 0 24 24" aria-hidden="true" class="ico ico--moon"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <svg viewBox="0 0 24 24" aria-hidden="true" class="ico ico--sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
+      <a class="btn btn--small" href="#contact">Contact</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO: the two lines of work, side by side -->
+  <section class="hero" id="top" aria-labelledby="hero-title" data-crosshair>
+    <div class="hero__grid-bg" aria-hidden="true"></div>
+    <div class="crosshair" aria-hidden="true">
+      <span class="crosshair__h"></span><span class="crosshair__v"></span>
+      <span class="crosshair__read" data-readout>X 0.0 · Y 0.0 mm</span>
+    </div>
+
+    <div class="wrap">
+      <p class="hero__place">Product studio · Pune, India</p>
+      <h1 id="hero-title" class="hero__title">
+        <span class="line"><span>Apps for <mark class="hl">clinics and families.</mark></span></span>
+        <span class="line"><span>Software for <mark class="hl hl--b">engineers.</mark></span></span>
+      </h1>
+      <p class="hero__lede">
+        Modus Lab has two lines of work. Our Android apps help small clinics and families keep medicines on track.
+        Our engineering software helps mechanical engineers check how parts fit together before anything is made.
+      </p>
+
+      <div class="split">
+        <!-- A -->
+        <a class="vpanel vpanel--a" href="#apps" aria-labelledby="va-title">
+          <div class="vpanel__head">
+            <span class="datum" aria-hidden="true"><span class="datum__box">A</span><span class="datum__tri"></span></span>
+            <div>
+              <p class="vpanel__kind">Health apps · Android</p>
+              <h2 id="va-title" class="vpanel__title">Medicines, stock and doses, handled on a phone.</h2>
+            </div>
+          </div>
+          <ul class="vpanel__products">
+            <li><b>MediStock Clinic</b><span>for clinic pharmacies</span></li>
+            <li><b>FamilyMeds</b><span>for families at home</span></li>
+          </ul>
+          <div class="vpanel__art vpanel__art--a" aria-hidden="true">
+            <img class="mini-phone mini-phone--ms" src="assets/img/medistock-1-home.webp" width="640" height="1138" alt="" fetchpriority="high">
+            <div class="mini-ring">
+              <div class="mini-ring__screen">
+                <span class="mini-ring__state">Dose alarm</span>
+                <span class="mini-ring__time">8:00</span>
+                <span class="mini-ring__face"><i></i><i></i>A</span>
+                <span class="mini-ring__who">Amma's medicine</span>
+                <span class="mini-ring__take">Taken</span>
+              </div>
+            </div>
+            <div class="toast">
+              <span class="toast__app">MediStock → FamilyMeds</span>
+              <span class="toast__msg">Prescription added · 3 medicines</span>
+            </div>
+          </div>
+          <span class="vpanel__go">See the health apps <span aria-hidden="true">↓</span></span>
+        </a>
+
+        <!-- B -->
+        <a class="vpanel vpanel--b" href="#engineering" aria-labelledby="vb-title">
+          <div class="vpanel__head">
+            <span class="datum" aria-hidden="true"><span class="datum__box">B</span><span class="datum__tri"></span></span>
+            <div>
+              <p class="vpanel__kind">Engineering software · Web</p>
+              <h2 id="vb-title" class="vpanel__title">Know how parts stack up before they are made.</h2>
+            </div>
+          </div>
+          <ul class="vpanel__products">
+            <li><b>StackSense</b><span>tolerance stack-up analysis</span></li>
+          </ul>
+          <div class="vpanel__art vpanel__art--b" aria-hidden="true">
+            <svg class="asm" viewBox="0 0 520 260">
+              <g class="asm__parts">
+                <rect class="p p1" x="30" y="70" width="130" height="80" rx="4"/>
+                <rect class="p p2" x="160" y="92" width="150" height="36" rx="3"/>
+                <rect class="p p3" x="310" y="58" width="80" height="104" rx="4"/>
+                <rect class="p p4" x="414" y="70" width="76" height="80" rx="4"/>
+                <path class="axis" d="M14 110 H506"/>
+              </g>
+              <g class="asm__dims">
+                <path class="d" pathLength="1" d="M30 196 H160"/>
+                <path class="d" pathLength="1" d="M160 196 H310"/>
+                <path class="d" pathLength="1" d="M310 196 H390"/>
+                <path class="d d--gap" pathLength="1" d="M390 196 H414"/>
+                <path class="d" pathLength="1" d="M414 196 H490"/>
+                <path class="e" d="M30 160 V204 M160 140 V204 M310 168 V204 M390 168 V204 M414 160 V204 M490 160 V204"/>
+              </g>
+              <g class="asm__labels">
+                <text x="95" y="222">A 42.00 ±0.10</text>
+                <text x="235" y="222">B 58.00 ±0.20</text>
+                <text x="350" y="222">C 30.00 ±0.15</text>
+                <text x="452" y="222">D 26.00 ±0.08</text>
+              </g>
+              <g class="asm__gap">
+                <path d="M402 196 V40"/>
+                <rect x="352" y="14" width="100" height="30" rx="4"/>
+                <text x="402" y="34" data-gap>GAP 0.42</text>
+              </g>
+            </svg>
+          </div>
+          <span class="vpanel__go">See the engineering work <span aria-hidden="true">↓</span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== A · HEALTH APPS ===================== -->
+  <section id="apps" class="vertical vertical--a" aria-labelledby="apps-title">
+    <div class="wrap vhead">
+      <div class="vhead__copy">
+        <p class="vhead__tag"><span class="datum datum--sm" aria-hidden="true"><span class="datum__box">A</span><span class="datum__tri"></span></span>Health apps</p>
+        <h2 id="apps-title" class="vhead__title">Android apps that keep medicines on track, at the clinic counter and at home.</h2>
+        <dl class="defs">
+          <div><dt>Who it's for</dt><dd>Small clinics with an in-house pharmacy, and families looking after a parent's medicines.</dd></div>
+          <div><dt>Runs on</dt><dd>Android phones. Works without internet; health data is stored in India.</dd></div>
+          <div><dt>Products</dt><dd>MediStock Clinic and FamilyMeds, built to share prescriptions with each other.</dd></div>
+        </dl>
+      </div>
+
+      <figure class="drawing" aria-labelledby="fig1">
+        <div class="drawing__canvas">
+          <img class="drawing__phone" src="assets/img/medistock-1-home.webp" width="640" height="1138" loading="lazy" decoding="async"
+               alt="MediStock Clinic home screen for a demo clinic: quick actions for new bill, add stock, scan and patients; an out-of-stock alert for Shelcal 500; today's sales of ₹333.60.">
+          <svg class="drawing__lines" viewBox="0 0 640 600" aria-hidden="true">
+            <path class="lead" pathLength="1" d="M349 197 L440 150 H470"/>
+            <path class="lead" pathLength="1" d="M211 272 L196 262 H170"/>
+            <path class="lead" pathLength="1" d="M334 348 L440 386 H470"/>
+            <circle class="dot" cx="349" cy="197" r="4.5"/>
+            <circle class="dot" cx="211" cy="272" r="4.5"/>
+            <circle class="dot" cx="334" cy="348" r="4.5"/>
+            <path class="ext" d="M200 524 V560 M440 524 V560"/>
+            <path class="dim" pathLength="1" d="M200 548 H440"/>
+            <path class="arrow" d="M200 548 l11 -4 v8z M440 548 l-11 -4 v8z"/>
+          </svg>
+          <span class="balloon" style="--x:75.3%;--y:25%">1</span>
+          <span class="balloon" style="--x:24.7%;--y:43.7%">2</span>
+          <span class="balloon" style="--x:75.3%;--y:64.3%">3</span>
+          <span class="note note--r" style="--y:25%">Scan a barcode or pick from 150+ Indian medicines</span>
+          <span class="note note--l" style="--y:43.7%">Expired, low and out of stock flagged everywhere</span>
+          <span class="note note--r" style="--y:64.3%">GST bill with prescription in under a minute</span>
+          <span class="dimlabel">One Android phone runs the clinic pharmacy</span>
+        </div>
+        <ol class="legend">
+          <li>Scan a barcode or pick from 150+ Indian medicines</li>
+          <li>Expired, low and out-of-stock medicines flagged everywhere</li>
+          <li>GST bill with prescription in under a minute</li>
+        </ol>
+        <figcaption id="fig1" class="drawing__caption"><span>Fig. A1</span> MediStock Clinic, home screen. Demo clinic data.</figcaption>
+      </figure>
+    </div>
+
+    <!-- MediStock -->
+    <article class="product product--medistock" id="medistock" aria-labelledby="ms-title">
+      <div class="wrap product__grid">
+        <div class="product__copy">
+          <div class="product__head">
+            <img src="assets/img/medistock-icon.webp" width="56" height="56" alt="" class="product__icon">
+            <div>
+              <h3 id="ms-title" class="product__name">MediStock Clinic</h3>
+              <p class="status status--live"><span class="status__dot"></span>Coming soon to Google Play</p>
+            </div>
+          </div>
+          <p class="product__pitch">Runs a small clinic's in-house pharmacy from one Android phone: stock, GST bills, prescriptions and patient records.</p>
+          <dl class="specs">
+            <div><dt>Stock</dt><dd>Every batch tracked with expiry, purchase price and MRP. Smart Order learns your sales and suggests what to buy, then sends the list to your supplier on WhatsApp.</dd></div>
+            <div><dt>Billing</dt><dd>Dosage like 1-0-1 for 5 days works out the quantity. CGST and SGST split, consultation fee, Cash, UPI or card. Share the bill as a PDF.</dd></div>
+            <div><dt>Patients</dt><dd>Visit history, test-report trends, allergies with warnings at billing time, and each doctor's usual prescriptions in one tap.</dd></div>
+            <div><dt>Offline</dt><dd>Bills are saved on the phone and sync when the connection returns.</dd></div>
+            <div><dt>Plans</dt><dd>Free for up to 50 medicines and 100 bills a month. Pro adds Smart Order, exports, daily email and staff logins, with a 30-day trial.</dd></div>
+          </dl>
+          <div class="product__cta">
+            <a class="btn btn--product" href="mailto:support@moduslab.in?subject=MediStock%20Clinic%20early%20access">Ask for early access</a>
+            <a class="textlink" href="https://medistock-moduslab.expo.app/privacy-policy">Privacy policy</a>
+          </div>
+        </div>
+        <div class="product__media product__media--phones">
+          <img class="shot shot--back" src="assets/img/medistock-7-smart-order.webp" width="640" height="1138" loading="lazy" decoding="async"
+               alt="Smart Order screen: five medicines to order now, each with a suggested quantity and a 'why this amount' explanation.">
+          <img class="shot shot--front" src="assets/img/medistock-3-new-bill.webp" width="640" height="1138" loading="lazy" decoding="async"
+               alt="New bill screen: Dolo 650 with dosage 1-0-1 for 3 days, worked out as 6 tablets, after food.">
+        </div>
+      </div>
+    </article>
+
+    <!-- Clinic to home -->
+    <section class="bridge" aria-labelledby="bridge-title">
+      <div class="wrap">
+        <h3 id="bridge-title" class="bridge__title">From the clinic counter to the kitchen table</h3>
+        <p class="bridge__lede">MediStock and FamilyMeds talk to each other. A prescription written at the clinic becomes a dose alarm at home, with no retyping.</p>
+        <ol class="flow">
+          <li class="flow__step">
+            <span class="flow__n">1</span>
+            <h4>Doctor bills in MediStock</h4>
+            <p>The prescription, dosage and course length are already on the bill.</p>
+          </li>
+          <li class="flow__step">
+            <span class="flow__n">2</span>
+            <h4>Patient scans the QR on the bill</h4>
+            <p>Or types the six-character code. The medicines land in FamilyMeds.</p>
+          </li>
+          <li class="flow__step">
+            <span class="flow__n">3</span>
+            <h4>FamilyMeds rings at every dose</h4>
+            <p>If a dose is missed, the rest of the family gets an alert on their phones.</p>
+          </li>
+        </ol>
+        <p class="bridge__note">In testing now. Arrives with the first public FamilyMeds release.</p>
+      </div>
+    </section>
+
+    <!-- FamilyMeds -->
+    <article class="product product--familymeds" id="familymeds" aria-labelledby="fm-title">
+      <div class="wrap product__grid product__grid--flip">
+        <div class="product__copy">
+          <div class="product__head">
+            <svg class="product__icon product__icon--svg" viewBox="0 0 56 56" aria-hidden="true">
+              <rect width="56" height="56" rx="14" class="fm-ico-bg"/>
+              <path d="M28 14a9 9 0 0 1 9 9c0 6-9 15-9 15s-9-9-9-15a9 9 0 0 1 9-9Z" class="fm-ico-fg"/>
+              <rect x="22" y="40" width="12" height="4" rx="2" class="fm-ico-fg"/>
+            </svg>
+            <div>
+              <h3 id="fm-title" class="product__name">FamilyMeds</h3>
+              <p class="status status--dev"><span class="status__dot"></span>In development · Android</p>
+            </div>
+          </div>
+          <p class="product__pitch">Every family member's medicines in one place, with an alarm at each dose and an alert when one is missed.</p>
+          <dl class="specs">
+            <div><dt>Alarms</dt><dd>Rings like a phone call, full screen, even with the app closed, the phone locked and no network.</dd></div>
+            <div><dt>Family</dt><dd>When a parent misses a dose, the other members' phones check and alert. Private medicines stay private.</dd></div>
+            <div><dt>Stock</dt><dd>Counts down with each dose, shows days left and reminds you to reorder.</dd></div>
+            <div><dt>Languages</dt><dd>English, Hindi, Tamil, Telugu, Kannada and Marathi.</dd></div>
+          </dl>
+          <div class="product__cta">
+            <a class="btn btn--product" href="mailto:support@moduslab.in?subject=FamilyMeds%20launch">Tell me when it launches</a>
+          </div>
+        </div>
+        <div class="product__media">
+          <div class="ringer" role="img" aria-label="Illustration of a FamilyMeds dose alarm ringing like a call: Amma's medicine, Metformin 500 mg, one tablet after food, 8:00 AM, with Snooze and Taken buttons.">
+            <div class="ringer__phone" aria-hidden="true">
+              <p class="ringer__state">Dose alarm · ringing</p>
+              <p class="ringer__time">8:00</p>
+              <div class="ringer__avatar">
+                <span class="ringer__pulse"></span><span class="ringer__pulse"></span><span class="ringer__pulse"></span>
+                <span class="ringer__face">A</span>
+              </div>
+              <p class="ringer__who">Amma's medicine</p>
+              <div class="ringer__pill">
+                <p class="ringer__med">Metformin 500 mg</p>
+                <p class="ringer__dose">1 tablet · after food</p>
+              </div>
+              <div class="ringer__actions">
+                <span class="ringer__btn ringer__btn--snooze">Snooze</span>
+                <span class="ringer__btn ringer__btn--take">Taken</span>
+              </div>
+              <p class="ringer__fine">Still not taken? The family gets an alert.</p>
+            </div>
+          </div>
+          <p class="media-note">Illustration. Screens may change before release.</p>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <!-- ===================== B · ENGINEERING ===================== -->
+  <section id="engineering" class="vertical vertical--b" aria-labelledby="eng-title">
+    <div class="board" aria-hidden="true"></div>
+    <div class="wrap vhead vhead--b">
+      <div class="vhead__copy">
+        <p class="vhead__tag"><span class="datum datum--sm" aria-hidden="true"><span class="datum__box">B</span><span class="datum__tri"></span></span>Engineering software</p>
+        <h2 id="eng-title" class="vhead__title">Web software for checking how parts fit together, before anything is machined or moulded.</h2>
+        <dl class="defs">
+          <div><dt>Who it's for</dt><dd>Mechanical, design and quality engineers, and small manufacturing teams.</dd></div>
+          <div><dt>Runs in</dt><dd>Any browser. Results export as a PDF for the design review.</dd></div>
+          <div><dt>Products</dt><dd>StackSense, our tolerance stack-up tool. More engineering tools are on the bench.</dd></div>
+        </dl>
+      </div>
+    </div>
+
+    <article class="eng" id="stacksense" aria-labelledby="ss-title">
+      <div class="wrap eng__grid">
+        <div class="eng__copy">
+          <div class="product__head">
+            <svg class="product__icon product__icon--svg" viewBox="0 0 56 56" aria-hidden="true">
+              <rect width="56" height="56" rx="14" class="ss-ico-bg"/>
+              <rect x="12" y="15" width="32" height="6" rx="1.5" class="ss-ico-fg"/>
+              <rect x="12" y="25" width="22" height="6" rx="1.5" class="ss-ico-fg" opacity=".75"/>
+              <rect x="12" y="35" width="12" height="6" rx="1.5" class="ss-ico-fg" opacity=".5"/>
+            </svg>
+            <div>
+              <h3 id="ss-title" class="product__name">StackSense</h3>
+              <p class="status status--early"><span class="status__dot"></span>Early build · web</p>
+            </div>
+          </div>
+          <p class="product__pitch">Tolerance stack-up analysis. Fast enough for a design review, careful enough for production.</p>
+          <dl class="specs">
+            <div><dt>Analysis</dt><dd>Axial, radial and angular stacks with worst-case and RSS results.</dd></div>
+            <div><dt>GD&amp;T</dt><dd>Geometric callouts go in as real tolerance inputs, not a footnote.</dd></div>
+            <div><dt>Decisions</dt><dd>Ranks which part contributes most variance and suggests where tightening pays off.</dd></div>
+            <div><dt>Reports</dt><dd>A PDF ready for the design review pack.</dd></div>
+          </dl>
+          <div class="product__cta">
+            <a class="btn btn--amber" href="mailto:support@moduslab.in?subject=StackSense%20waitlist">Join the waitlist</a>
+          </div>
+        </div>
+
+        <div class="eng__figs">
+          <figure class="sim" aria-labelledby="fig-b1">
+            <div class="sim__top">
+              <p class="sim__title">Gap after assembly</p>
+              <p class="sim__live"><span class="sim__dot"></span>Simulating</p>
+            </div>
+            <canvas class="sim__canvas" width="640" height="300" data-sim
+                    role="img" aria-label="Monte Carlo simulation: thousands of simulated assemblies fall into a histogram of the gap, between a lower limit of 0.15 mm and an upper limit of 0.75 mm."></canvas>
+            <dl class="sim__stats">
+              <div><dt>Assemblies</dt><dd data-stat="n">0</dd></div>
+              <div><dt>Mean gap</dt><dd data-stat="mean">0.000</dd></div>
+              <div><dt>Std dev</dt><dd data-stat="sd">0.000</dd></div>
+              <div><dt>In spec</dt><dd data-stat="yield">0.0%</dd></div>
+              <div><dt>Cpk</dt><dd data-stat="cpk">0.00</dd></div>
+            </dl>
+            <figcaption id="fig-b1" class="drawing__caption"><span>Fig. B1</span> Monte Carlo stack-up, simulated in your browser. Example parts.</figcaption>
+          </figure>
+
+          <figure class="stack" aria-labelledby="fig-b2">
+            <div class="bars" role="img" aria-label="Contribution to variance: B 51 percent, C 28 percent, A 13 percent, D 8 percent.">
+              <div class="bar is-top" style="--v:51"><span class="bar__k">B</span><span class="bar__track"><span class="bar__fill"></span></span><span class="bar__v">51%</span></div>
+              <div class="bar" style="--v:28"><span class="bar__k">C</span><span class="bar__track"><span class="bar__fill"></span></span><span class="bar__v">28%</span></div>
+              <div class="bar" style="--v:13"><span class="bar__k">A</span><span class="bar__track"><span class="bar__fill"></span></span><span class="bar__v">13%</span></div>
+              <div class="bar" style="--v:8"><span class="bar__k">D</span><span class="bar__track"><span class="bar__fill"></span></span><span class="bar__v">8%</span></div>
+            </div>
+            <figcaption id="fig-b2" class="drawing__caption"><span>Fig. B2</span> Contribution to gap variance. Tighten B first.</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="wrap">
+        <div class="bench">
+          <p class="bench__title">On the bench</p>
+          <ul class="bench__list">
+            <li><b>Full 3D stack-up</b><span>X, Y and Z together, with direction cosines for each part.</span></li>
+            <li><b>Position with bonus tolerance</b><span>MMC and LMC modifiers that add tolerance as features depart from size.</span></li>
+            <li><b>ASME Y14.5 / ISO 1101 report</b><span>Each GD&amp;T callout mapped to its clause in a formal PDF.</span></li>
+          </ul>
+          <p class="bench__note">Planned, not yet built.</p>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <!-- PRINCIPLES as a drawing title block -->
+  <section id="principles" class="principles" aria-labelledby="principles-title">
+    <div class="wrap">
+      <h2 id="principles-title" class="section-title">How we build</h2>
+      <p class="section-lede">The same rules apply to both lines of work, written down the way an engineer fills in a title block.</p>
+      <div class="titleblock">
+        <div class="tb tb--wide">
+          <span class="tb__k">Network</span>
+          <p class="tb__v">Offline first.</p>
+          <p class="tb__d">Bills and doses are saved on the phone and sync when the signal returns. Alarms ring without internet.</p>
+        </div>
+        <div class="tb">
+          <span class="tb__k">Data</span>
+          <p class="tb__v">Health records stay in India.</p>
+          <p class="tb__d">Clinic and family data is stored in Mumbai.</p>
+        </div>
+        <div class="tb">
+          <span class="tb__k">Exit</span>
+          <p class="tb__v">Yours to take or delete.</p>
+          <p class="tb__d">Export your records at any time. In MediStock you can delete your account and data from inside the app.</p>
+        </div>
+        <div class="tb">
+          <span class="tb__k">Ads</span>
+          <p class="tb__v">None.</p>
+          <p class="tb__d">Paid plans fund the work, so your data is never the product.</p>
+        </div>
+        <div class="tb">
+          <span class="tb__k">Release</span>
+          <p class="tb__v">Staged and reversible.</p>
+          <p class="tb__d">Updates go to a test phone, then a slice of users, with one-step rollback.</p>
+        </div>
+        <div class="tb tb--wide">
+          <span class="tb__k">Support</span>
+          <p class="tb__v">A person answers.</p>
+          <p class="tb__d">Mail to support@moduslab.in reaches the engineer who built the app.</p>
+        </div>
+        <div class="tb tb--meta" aria-hidden="true">
+          <span>Drawn by Modus Lab</span><span>Sheet 1 of 1</span><span>Rev. 2026-10</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about" aria-labelledby="about-title">
+    <div class="wrap about__grid">
+      <h2 id="about-title" class="about__title"><span lang="la">Modus</span>: a way of doing something.</h2>
+      <div class="about__body">
+        <p>Modus Lab is an independent studio in Pune, started by a mechanical R&amp;D engineer. The habits come from the shop floor: write the requirement down, test against it, and keep a record of every change.</p>
+        <p>That is why the studio has two lines of work. The engineering software grows out of that R&amp;D work. The health apps apply the same discipline to problems at the clinic and at home.</p>
+        <p class="about__reg">Registered MSME (Udyam), Maharashtra.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact" aria-labelledby="contact-title">
+    <div class="wrap">
+      <h2 id="contact-title" class="contact__title">Write to us</h2>
+      <a class="contact__mail" href="mailto:support@moduslab.in">support@moduslab.in</a>
+      <div class="contact__cols">
+        <div>
+          <p class="contact__k"><span class="navtag">A</span>Health apps</p>
+          <ul class="contact__links">
+            <li><a href="mailto:support@moduslab.in?subject=Try%20MediStock%20at%20my%20clinic">Try MediStock at your clinic</a></li>
+            <li><a href="mailto:support@moduslab.in?subject=FamilyMeds%20launch">Hear when FamilyMeds launches</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="contact__k"><span class="navtag">B</span>Engineering</p>
+          <ul class="contact__links">
+            <li><a href="mailto:support@moduslab.in?subject=StackSense%20waitlist">Join the StackSense waitlist</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__row">
+    <p>© <span data-year>2026</span> Modus Lab · Pune, India</p>
+    <ul class="footer__links">
+      <li><a href="https://medistock-moduslab.expo.app/privacy-policy">MediStock privacy policy</a></li>
+      <li><a href="https://medistock-moduslab.expo.app/delete-account">Delete a MediStock account</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="assets/main.js?v=11" defer></script>
+</body>
+</html>
