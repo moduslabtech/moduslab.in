@@ -244,4 +244,25 @@
     }
     requestAnimationFrame(step);
   }
+
+  /* ---------- Fig. B0: intro film — big play button, "Watch the intro" link ---------- */
+  var film = document.querySelector('[data-film]');
+  var filmPlay = document.querySelector('[data-film-play]');
+  if (film && filmPlay) {
+    var start = function () {
+      filmPlay.hidden = true;
+      film.controls = true;                     // native controls only once the film is playing
+      var p = film.play();
+      if (p && p.catch) p.catch(function () { filmPlay.hidden = false; });
+    };
+    filmPlay.addEventListener('click', start);
+    film.addEventListener('play', function () { filmPlay.hidden = true; });
+    film.addEventListener('ended', function () { filmPlay.hidden = false; });
+    var open = document.querySelector('[data-film-open]');
+    if (open) open.addEventListener('click', function (e) {
+      e.preventDefault();
+      film.closest('figure').scrollIntoView({ behavior: motionOK ? 'smooth' : 'auto', block: 'center' });
+      setTimeout(start, motionOK ? 450 : 0);
+    });
+  }
 })();

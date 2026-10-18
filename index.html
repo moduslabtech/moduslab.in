@@ -22,7 +22,7 @@
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 
 <link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/styles.css?v=15">
+<link rel="stylesheet" href="assets/styles.css?v=17">
 
 <script>
   // Apply a saved theme before first paint so the page never flashes the wrong one.
@@ -41,6 +41,19 @@
   "logo": "https://moduslab.in/assets/favicon.svg",
   "email": "support@moduslab.in",
   "address": { "@type": "PostalAddress", "addressLocality": "Pune", "addressRegion": "Maharashtra", "addressCountry": "IN" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "StackSense in 60 seconds",
+  "description": "Tolerance stack-up analysis in your browser: axial, radial and angular stacks with worst case, RSS, Cpk and Monte Carlo, plus press-fit and bearing-fit tools.",
+  "thumbnailUrl": "https://moduslab.in/assets/img/stacksense-intro-poster.jpg",
+  "contentUrl": "https://moduslab.in/assets/video/stacksense-intro.mp4",
+  "uploadDate": "2026-10-18",
+  "duration": "PT1M1S",
+  "publisher": { "@type": "Organization", "name": "Modus Lab", "url": "https://moduslab.in/" }
 }
 </script>
 </head>
@@ -466,6 +479,7 @@
           </dl>
           <div class="product__cta">
             <a class="btn btn--amber" href="/stacksense/">Open StackSense</a>
+            <a class="btn btn--ghost" href="#stacksense-film" data-film-open><span aria-hidden="true">▶</span> Watch the intro · 1 min</a>
           </div>
         </div>
 
@@ -497,6 +511,25 @@
             <figcaption id="fig-b2" class="drawing__caption"><span>Fig. B2</span> Contribution to gap variance. Tighten B first.</figcaption>
           </figure>
         </div>
+      </div>
+
+      <div class="wrap">
+        <figure class="film" id="stacksense-film" aria-labelledby="fig-b0">
+          <div class="film__frame">
+            <video class="film__video" data-film playsinline preload="none"
+                   poster="assets/img/stacksense-intro-poster.jpg" width="1920" height="1080">
+              <source src="assets/video/stacksense-intro.mp4" type="video/mp4">
+              Your browser cannot play this video. <a href="assets/video/stacksense-intro.mp4">Download it (MP4, 11 MB)</a>.
+            </video>
+            <button class="film__play" type="button" data-film-play aria-label="Play the StackSense intro video, 1 minute, with sound">
+              <span class="film__play-row">
+                <span class="film__play-icon" aria-hidden="true"></span>
+                <span class="film__play-text">Watch StackSense in 60 seconds · sound on</span>
+              </span>
+            </button>
+          </div>
+          <figcaption id="fig-b0" class="drawing__caption"><span>Fig. B0</span> StackSense in 60 seconds — sound on.</figcaption>
+        </figure>
       </div>
 
       <div class="wrap">
@@ -604,6 +637,6 @@
   </div>
 </footer>
 
-<script src="assets/main.js?v=15" defer></script>
+<script src="assets/main.js?v=17" defer></script>
 </body>
 </html>
