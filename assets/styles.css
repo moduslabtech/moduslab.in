@@ -825,15 +825,21 @@ a { color: inherit; }
 .principles { padding-block: var(--space-section); }
 .titleblock {
   margin-top: clamp(36px, 5vw, 56px);
-  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
   border: 2px solid var(--ink); border-radius: 4px; overflow: hidden;
   background: var(--ink); gap: 1px;
 }
-.tb { background: var(--bg); padding: 22px 22px 26px; display: flex; flex-direction: column; gap: 6px; min-height: 180px; }
-.tb--wide { grid-column: span 2; }
-.tb__k { font-size: .75rem; font-weight: 700; text-transform: uppercase; color: var(--ink-2); }
-.tb__v { margin-top: auto; font-weight: 780; font-variation-settings: "wdth" 108; font-size: clamp(1.25rem, 1.1rem + .6vw, 1.625rem); line-height: 1.15; letter-spacing: -0.01em; }
-.tb__d { color: var(--ink-2); font-size: .9688rem; line-height: 1.5; }
+.tb { background: var(--bg); padding: clamp(20px, 2.4vw, 28px); display: flex; flex-direction: column; gap: 10px; }
+.tb__k { display: flex; align-items: center; gap: 10px; font-size: .75rem; font-weight: 700; text-transform: uppercase; color: var(--ink-2); }
+.tb__n {
+  display: inline-grid; place-items: center; flex: none; width: 24px; height: 24px; border-radius: 50%;
+  border: 1.5px solid var(--ink); color: var(--ink); font-size: .75rem; font-variant-numeric: tabular-nums;
+}
+.tb:hover .tb__n { background: var(--amber); border-color: var(--amber); color: var(--on-amber); }
+.tb__v { margin-top: 6px; font-weight: 780; font-variation-settings: "wdth" 108; font-size: clamp(1.25rem, 1.1rem + .5vw, 1.5rem); line-height: 1.15; letter-spacing: -0.01em; }
+.tb__d { color: var(--ink-2); font-size: .9688rem; line-height: 1.55; max-width: 34em; }
+.tb__d a { color: var(--ink); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+.tb__d a:hover { text-decoration-color: var(--amber-deep); }
 .tb--meta {
   grid-column: 1 / -1; min-height: 0; padding: 10px 22px; flex-direction: row; justify-content: space-between; gap: 16px;
   font-size: .75rem; font-weight: 600; text-transform: uppercase; color: var(--ink-2); background: var(--surface);
@@ -843,9 +849,6 @@ a { color: inherit; }
 }
 @media (max-width: 560px) {
   .titleblock { grid-template-columns: 1fr; }
-  .tb--wide { grid-column: auto; }
-  .tb { min-height: 0; }
-  .tb__v { margin-top: 10px; }
   .tb--meta { flex-wrap: wrap; }
 }
 
