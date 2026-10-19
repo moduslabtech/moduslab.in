@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Modus Lab · Health apps and engineering software</title>
-<meta name="description" content="Modus Lab is a product studio in Pune, India, with two lines of work: Android apps for clinics and families (MediStock Clinic, FamilyMeds) and engineering software for mechanical engineers (StackSense).">
+<title>Modus Lab · MediStock, FamilyMeds and StackSense</title>
+<meta name="description" content="Modus Lab is a product studio in Pune, India. MediStock Clinic runs clinic pharmacies, FamilyMeds reminds families about medicines, and StackSense does tolerance stack-up analysis for engineers.">
 <link rel="canonical" href="https://moduslab.in/">
 <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
@@ -12,13 +12,15 @@
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Modus Lab">
-<meta property="og:title" content="Modus Lab · Health apps and engineering software">
+<meta property="og:title" content="Modus Lab · MediStock, FamilyMeds and StackSense">
 <meta property="og:description" content="Android apps for clinics and families. Software for engineers. Made in Pune, India.">
 <meta property="og:url" content="https://moduslab.in/">
 <meta property="og:image" content="https://moduslab.in/assets/img/og.png">
 <meta name="twitter:card" content="summary_large_image">
 
+<link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/img/icon-192.png" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 
 <link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -77,11 +79,30 @@
 {
   "@context": "https://schema.org",
   "@type": "Organization",
+  "@id": "https://moduslab.in/#org",
   "name": "Modus Lab",
+  "alternateName": ["ModusLab", "Modus Lab Pune"],
   "url": "https://moduslab.in/",
-  "logo": "https://moduslab.in/assets/favicon.svg",
+  "logo": "https://moduslab.in/assets/img/icon-512.png",
+  "description": "Udyam-registered product studio in Pune, India, making MediStock Clinic, FamilyMeds and StackSense.",
+  "sameAs": ["https://github.com/moduslabtech"],
   "email": "support@moduslab.in",
-  "address": { "@type": "PostalAddress", "addressLocality": "Pune", "addressRegion": "Maharashtra", "addressCountry": "IN" }
+  "address": { "@type": "PostalAddress", "addressLocality": "Pune", "addressRegion": "Maharashtra", "addressCountry": "IN" },
+  "makesOffer": [
+    { "@type": "Offer", "itemOffered": { "@type": "SoftwareApplication", "name": "MediStock Clinic", "applicationCategory": "MedicalApplication", "operatingSystem": "Android", "url": "https://moduslab.in/#medistock" } },
+    { "@type": "Offer", "itemOffered": { "@type": "SoftwareApplication", "name": "FamilyMeds", "applicationCategory": "HealthApplication", "operatingSystem": "Android", "url": "https://moduslab.in/#familymeds" } },
+    { "@type": "Offer", "itemOffered": { "@type": "SoftwareApplication", "name": "StackSense", "applicationCategory": "DesignApplication", "operatingSystem": "Web browser", "url": "https://moduslab.in/stacksense/" } }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Modus Lab",
+  "alternateName": ["ModusLab", "moduslab.in"],
+  "url": "https://moduslab.in/",
+  "publisher": { "@id": "https://moduslab.in/#org" }
 }
 </script>
 <script type="application/ld+json">
