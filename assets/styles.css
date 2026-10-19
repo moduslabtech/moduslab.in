@@ -1049,3 +1049,101 @@ a { color: inherit; }
   @keyframes film-ping { 0% { box-shadow: 0 0 0 0 oklch(0.83 0.155 74 / 0.55); } 70%, 100% { box-shadow: 0 0 0 22px oklch(0.83 0.155 74 / 0); } }
 }
 .film .drawing__caption { justify-content: flex-start; }
+
+/* ---------- Intro: the studio mark draws itself, then flies into the header ----------
+   Follows Youtube/Logo/app_tool_1.mp4 (light) and app_tool_2.mp4 (dark), compressed to about four seconds.
+   Only shown when the script in <head> sets html[data-intro]: once per visit, with motion allowed. */
+.intro { display: none; }
+html[data-intro] .intro {
+  position: fixed; inset: 0; z-index: 100;
+  display: grid; place-items: center; padding: var(--gutter); overflow: hidden;
+  --hl-y: .1em; --hl-h: .4em;
+  animation: intro-failsafe .3s ease 7s forwards;   /* never strand anyone behind it */
+}
+:root[data-theme="dark"] .intro { --hl-y: -.1em; --hl-h: .14em; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .intro { --hl-y: -.1em; --hl-h: .14em; } }
+
+.intro__paper { position: absolute; inset: 0; background: var(--bg); }
+.intro__paper::before {
+  content: ""; position: absolute; inset: 0;
+  background-image:
+    linear-gradient(to right, color-mix(in oklab, var(--line) 75%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in oklab, var(--line) 75%, transparent) 1px, transparent 1px);
+  background-size: 40px 40px; background-position: center;
+  -webkit-mask-image: radial-gradient(closest-side, #000 30%, transparent 100%);
+          mask-image: radial-gradient(closest-side, #000 30%, transparent 100%);
+  opacity: .8; animation: fade .6s ease-out both;
+}
+.intro__reg { position: absolute; width: 22px; height: 22px; fill: none; stroke: var(--line-strong); stroke-width: 1.2; animation: fade .6s ease-out .1s both; }
+.intro__reg--tl { top: clamp(20px, 5vw, 56px); left: clamp(20px, 5vw, 56px); }
+.intro__reg--tr { top: clamp(20px, 5vw, 56px); right: clamp(20px, 5vw, 56px); }
+.intro__reg--bl { bottom: clamp(20px, 5vw, 56px); left: clamp(20px, 5vw, 56px); }
+.intro__reg--br { bottom: clamp(20px, 5vw, 56px); right: clamp(20px, 5vw, 56px); }
+
+/* Sized so the lockup lands exactly on the header's mark and wordmark (26 × 32 px, 18 px type, 10 px gap). */
+.intro__lockup {
+  position: relative; font-size: min(11.5vw, 16vh, 140px);
+  display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: .49em; align-items: center;
+  animation: intro-open .65s var(--ease-out) 2.3s backwards;
+}
+.intro__mark { width: 1.26em; height: auto; overflow: visible; animation: intro-settle .65s var(--ease-out) 2.3s backwards; }
+.intro__box, .intro__m, .intro__stem, .intro__tri { fill: none; stroke: var(--ink); stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1; }
+.intro__box { stroke-width: 2.4; animation: draw .7s cubic-bezier(.45, 0, .3, 1) .15s backwards; }
+.intro__m { stroke-width: 2.6; animation: draw .6s linear .9s backwards; }
+.intro__stem { stroke-width: 2.4; stroke-linecap: butt; animation: draw .15s linear 1.5s backwards; }
+.intro__tri { fill: var(--amber); fill-opacity: 1; stroke-width: 1.6; animation: draw .28s linear 1.63s backwards, intro-fill .2s ease-out 1.9s backwards; }
+.intro__spark { fill: none; stroke: var(--amber); stroke-width: .7; stroke-linecap: round; opacity: 0; transform-box: fill-box; transform-origin: center; animation: intro-spark .45s var(--ease-out) 1.9s; }
+.intro__pen {
+  fill: var(--amber); stroke: var(--ink); stroke-width: .5; opacity: 0;
+  offset-path: path("M9 20V8.5l7 7.5 7-7.5V20"); offset-rotate: 0deg;
+  filter: drop-shadow(0 0 1.2px var(--amber));
+  animation: intro-pen .6s linear .9s;
+}
+.intro__dims { animation: intro-dims 2.4s linear both; }
+.intro__ext { fill: none; stroke: var(--line-strong); stroke-width: .25; }
+.intro__dim { fill: none; stroke: var(--line-strong); stroke-width: .25; stroke-dasharray: 1; animation: draw .45s var(--ease-quart) .45s backwards; }
+.intro__arrow { fill: var(--line-strong); }
+.intro__num, .intro__datum { fill: var(--ink-2); font-family: var(--font); font-weight: 600; font-variation-settings: "wdth" 68; }
+.intro__num { font-size: 2.2px; }
+.intro__datum { font-size: 1.5px; letter-spacing: .08em; }
+
+.intro__text { position: relative; transform: translateY(-.16em); }
+.intro__word {
+  font-weight: 800; font-size: .886em; line-height: 1; white-space: nowrap;
+  font-variation-settings: "wdth" 118; letter-spacing: -0.01em; color: var(--ink);
+}
+.intro__word span { display: inline-block; }
+.intro__word [style] { animation: intro-letter .5s var(--ease-out) calc(2.36s + var(--i) * 45ms) backwards; }
+.intro__lab { position: relative; isolation: isolate; }
+.intro__lab::before {
+  content: ""; position: absolute; z-index: -1; left: -.04em; right: -.04em; bottom: var(--hl-y); height: var(--hl-h);
+  background: var(--amber); transform-origin: left; animation: intro-swipe .4s var(--ease-quart) 2.95s backwards;
+}
+.intro__tag {
+  position: absolute; top: 100%; left: 0; right: 0; margin-top: max(10px, .14em);
+  font-size: max(9.5px, .15em); font-weight: 600; line-height: 1.5; letter-spacing: .32em;
+  text-transform: uppercase; font-variation-settings: "wdth" 68; color: var(--ink-2); text-wrap: balance;
+  animation: intro-tag .5s var(--ease-out) 3.1s backwards;
+}
+
+/* Leaving: the paper fades, the lockup flies onto the header logo (see the <head> script). */
+html[data-intro] .masthead .brand { opacity: 0; }
+html[data-intro="on"] .hero, html[data-intro="on"] .hero * { animation-play-state: paused !important; }
+html[data-intro="fly"] .intro, html[data-intro="skip"] .intro { pointer-events: none; }
+html[data-intro="fly"] .intro__paper { opacity: 0; transition: opacity .55s ease .05s; }
+html[data-intro="fly"] .intro__reg, html[data-intro="fly"] .intro__tag, html[data-intro="fly"] .intro__lab::before { opacity: 0; transition: opacity .2s ease; }
+html[data-intro="fly"] .intro__lockup { transform: var(--fly); transition: transform .72s cubic-bezier(.65, 0, .25, 1); }
+html[data-intro="fly"] .intro__text { transform: none; transition: transform .72s cubic-bezier(.65, 0, .25, 1); }
+html[data-intro="skip"] .intro { opacity: 0; transition: opacity .3s ease; }
+
+@keyframes intro-open { from { grid-template-columns: auto minmax(0, 0fr); column-gap: 0; } }
+@keyframes intro-settle { from { transform: scale(var(--intro-zoom, 1.55)); } }
+@media (max-width: 600px) { .intro { --intro-zoom: 1.9; } }
+@keyframes intro-fill { from { fill-opacity: 0; } }
+@keyframes intro-spark { 0% { opacity: 0; transform: scale(.6); } 30% { opacity: 1; } 100% { opacity: 0; transform: scale(1.35); } }
+@keyframes intro-pen { 0% { opacity: 1; offset-distance: 0%; } 92% { opacity: 1; } 100% { opacity: 0; offset-distance: 100%; } }
+@keyframes intro-dims { 0%, 15% { opacity: 0; } 25%, 85% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes intro-letter { from { opacity: 0; transform: translateY(.35em); } }
+@keyframes intro-swipe { from { transform: scaleX(0); } }
+@keyframes intro-tag { from { opacity: 0; transform: translateY(.6em); letter-spacing: .4em; } }
+@keyframes intro-failsafe { to { opacity: 0; visibility: hidden; } }

@@ -1,0 +1,27 @@
+# Modus Lab
+
+> Modus Lab is an Udyam-registered (MSME) product studio in Pune, India, run by a mechanical R&D engineer. It makes Android apps for clinics and families, and web software for mechanical engineers. Contact: support@moduslab.in
+
+## Products
+
+- [MediStock Clinic](https://moduslab.in/#medistock): Android app that runs a small Indian clinic's in-house pharmacy from one phone: batch and expiry stock tracking, GST bills (CGST/SGST) with prescriptions and dosage (e.g. 1-0-1 for 5 days), patient records, Smart Order suggestions sent to suppliers on WhatsApp, and offline billing. Status: beta, Google Play launch soon. Plans: Free (up to 50 medicines and 100 bills a month) and Pro (unlimited, Smart Order, exports, daily email, staff logins) with a 30-day free trial.
+- [FamilyMeds](https://moduslab.in/#familymeds): Android app for families managing medicines at home: full-screen dose alarms that ring like a call even offline, missed-dose alerts to other family members, stock countdown and reorder reminders. Languages: English, Hindi, Tamil, Telugu, Kannada, Marathi. Free, supported by non-personalised banner ads (never on alarms or alerts). Status: in development.
+- [StackSense](https://moduslab.in/#stacksense): web app for tolerance stack-up analysis: axial, radial and angular stacks, worst-case and RSS results, Monte Carlo simulation, GD&T callouts as tolerance inputs, contribution-to-variance ranking and PDF reports for design reviews. For mechanical, design and quality engineers. Status: in development, waitlist open.
+
+## How MediStock and FamilyMeds connect
+
+A prescription billed in MediStock Clinic carries a QR code (or six-character code). The patient scans it in FamilyMeds and the medicines become dose alarms at home, with no retyping.
+
+## Policies
+
+- [MediStock privacy policy](https://moduslab.in/medistock/privacy-policy.html)
+- [Delete a MediStock account](https://moduslab.in/medistock/delete-account.html)
+- [FamilyMeds privacy policy](https://moduslab.in/familymeds/privacy-policy.html)
+- [Delete a FamilyMeds account](https://moduslab.in/familymeds/delete-account.html)
+
+## Facts
+
+- Health data is stored in India (Mumbai region).
+- Apps work offline and sync when the connection returns.
+- Users can export their records and delete their account from inside the apps.
+- Support email reaches the engineer who built the app.

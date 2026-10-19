@@ -22,7 +22,7 @@
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 
 <link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/styles.css?v=18">
+<link rel="stylesheet" href="assets/styles.css?v=19">
 
 <script>
   // Apply a saved theme before first paint so the page never flashes the wrong one.
@@ -30,6 +30,47 @@
     var t = localStorage.getItem('ml-theme');
     if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
   } catch (e) {}
+
+  // Intro: the studio mark draws itself once per visit, then flies into the header.
+  // Skipped without JavaScript, with reduced motion, and on any tap, key or scroll.
+  (function () {
+    var root = document.documentElement;
+    var force = /[?&]intro\b/.test(location.search);
+    if (!window.matchMedia || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    try {
+      if (sessionStorage.getItem('ml-intro') && !force) return;
+      sessionStorage.setItem('ml-intro', '1');
+    } catch (e) {}
+    root.dataset.intro = 'on';
+    var events = ['pointerdown', 'keydown', 'wheel', 'touchstart'];
+    var finished = false;
+    var timer = setTimeout(function () { finish(true); }, 4100);
+    function finish(fly) {
+      if (finished) return;
+      finished = true;
+      clearTimeout(timer);
+      events.forEach(function (e) { removeEventListener(e, skip); });
+      var lock = document.querySelector('.intro__lockup');
+      var mark = document.querySelector('.intro__mark');
+      var brand = document.querySelector('.brand__mark');
+      var a = mark && mark.getBoundingClientRect();
+      var c = brand && brand.getBoundingClientRect();
+      if (fly && lock && a && c && a.height && c.height) {
+        var l = lock.getBoundingClientRect();
+        var ax = a.left + a.width / 2, ay = a.top + a.height / 2;
+        lock.style.transformOrigin = (ax - l.left) + 'px ' + (ay - l.top) + 'px';
+        lock.style.setProperty('--fly', 'translate(' + (c.left + c.width / 2 - ax) + 'px,' +
+          (c.top + c.height / 2 - ay) + 'px) scale(' + c.height / a.height + ')');
+        root.dataset.intro = 'fly';
+        setTimeout(function () { delete root.dataset.intro; }, 760);
+      } else {
+        root.dataset.intro = 'skip';
+        setTimeout(function () { delete root.dataset.intro; }, 360);
+      }
+    }
+    function skip() { finish(false); }
+    events.forEach(function (e) { addEventListener(e, skip, { passive: true }); });
+  })();
 </script>
 
 <script type="application/ld+json">
@@ -59,6 +100,38 @@
 </head>
 
 <body>
+<!-- Intro (from Youtube/Logo/app_tool_1.mp4 and app_tool_2.mp4): drawn only when the <head> script allows it -->
+<div class="intro" aria-hidden="true">
+  <div class="intro__paper"></div>
+  <svg class="intro__reg intro__reg--tl" viewBox="0 0 24 24"><circle cx="12" cy="12" r="6"/><path d="M12 2v20M2 12h20"/></svg>
+  <svg class="intro__reg intro__reg--tr" viewBox="0 0 24 24"><circle cx="12" cy="12" r="6"/><path d="M12 2v20M2 12h20"/></svg>
+  <svg class="intro__reg intro__reg--bl" viewBox="0 0 24 24"><circle cx="12" cy="12" r="6"/><path d="M12 2v20M2 12h20"/></svg>
+  <svg class="intro__reg intro__reg--br" viewBox="0 0 24 24"><circle cx="12" cy="12" r="6"/><path d="M12 2v20M2 12h20"/></svg>
+  <div class="intro__lockup">
+    <svg class="intro__mark" viewBox="0 0 32 40">
+      <g class="intro__dims">
+        <path class="intro__ext" d="M2 .5v-5M30 .5v-5M31.5 2h4.5M31.5 26h4.5"/>
+        <path class="intro__dim" pathLength="1" d="M2.4 -3H29.6"/>
+        <path class="intro__dim" pathLength="1" d="M34.5 2.4V25.6"/>
+        <path class="intro__arrow" d="M2.4 -3l2 -.8v1.6zM29.6 -3l-2 -.8v1.6zM34.5 2.4l-.8 2h1.6zM34.5 25.6l-.8 -2h1.6z"/>
+        <text class="intro__num" x="16" y="-4.6" text-anchor="middle">28</text>
+        <text class="intro__num" x="36.4" y="15">24</text>
+        <text class="intro__datum" x="23" y="40.5">DATUM</text>
+      </g>
+      <path class="intro__box" pathLength="1" d="M4 2H28a2 2 0 0 1 2 2V24a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Z"/>
+      <path class="intro__m" pathLength="1" d="M9 20V8.5l7 7.5 7-7.5V20"/>
+      <path class="intro__stem" pathLength="1" d="M16 26v5"/>
+      <path class="intro__tri" pathLength="1" d="M16 31l6 7H10z"/>
+      <path class="intro__spark" d="M8.2 33.6l-2.2-1M8 37.4l-2.3.6M23.8 33.6l2.2-1M24 37.4l2.3.6"/>
+      <circle class="intro__pen" r="1.25"/>
+    </svg>
+    <div class="intro__text">
+      <p class="intro__word"><span style="--i:0">M</span><span style="--i:1">o</span><span style="--i:2">d</span><span style="--i:3">u</span><span style="--i:4">s</span> <span class="intro__lab"><span style="--i:6">L</span><span style="--i:7">a</span><span style="--i:8">b</span></span></p>
+      <p class="intro__tag">Apps for people · Tools for engineers</p>
+    </div>
+  </div>
+</div>
+
 <a class="skip" href="#main">Skip to content</a>
 
 <header class="masthead">
@@ -558,8 +631,8 @@
         </div>
         <div class="tb">
           <span class="tb__k">Ads</span>
-          <p class="tb__v">None.</p>
-          <p class="tb__d">Paid plans fund the work, so your data is never the product.</p>
+          <p class="tb__v">Never in the clinic.</p>
+          <p class="tb__d">MediStock has no ads; paid plans fund it. FamilyMeds is free for families with a few non-personalised banners, never on alarms or alerts.</p>
         </div>
         <div class="tb">
           <span class="tb__k">Release</span>
