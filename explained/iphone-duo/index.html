@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>iPhone Duo explained: why the hinge is so hard to make · Modus Lab</title>
+<meta name="description" content="Apple&#x27;s first foldable sold out in minutes. We draw the 100-part hinge, the glass thinner than a hair, and the yield maths that turns 99.5% per part into about 60% good hinges.">
+<link rel="canonical" href="https://moduslab.in/explained/iphone-duo/">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
+<meta name="color-scheme" content="light dark">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Modus Lab">
+<meta property="og:title" content="Why Apple Can&#x27;t Make Enough iPhone Duos · Modus Lab">
+<meta property="og:description" content="Apple&#x27;s first foldable sold out in minutes. We draw the 100-part hinge, the glass thinner than a hair, and the yield maths that turns 99.5% per part into about 60% good hinges.">
+<meta property="og:url" content="https://moduslab.in/explained/iphone-duo/">
+<meta property="og:image" content="https://moduslab.in/assets/img/explained/iphone-duo.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/assets/img/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+<link rel="preload" href="/assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/styles.css?v=22">
+
+<script>
+  try {
+    var t = localStorage.getItem('ml-theme');
+    if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+  } catch (e) {}
+</script>
+<script>
+  // Before the video's release time (or while it has no YouTube id yet), show "premieres" instead of the player.
+  // The class is removed automatically at release, so no second deploy is needed.
+  (function () {
+    var hasId = false, left = Date.parse('2026-10-22T19:15:00+05:30') - Date.now(), r = document.documentElement;
+    if (left > 0 || !hasId) { r.classList.add('pre-release'); if (hasId && left < 864e5) setTimeout(function () { r.classList.remove('pre-release'); }, left); }
+  })();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Modus Lab",
+      "item": "https://moduslab.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Explained",
+      "item": "https://moduslab.in/explained/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "iPhone Duo",
+      "item": "https://moduslab.in/explained/iphone-duo/"
+    }
+  ]
+}
+</script>
+</head>
+
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="masthead">
+  <div class="wrap masthead__row">
+    <a class="brand" href="/" aria-label="Modus Lab, home">
+      <svg class="brand__mark" viewBox="0 0 32 40" aria-hidden="true">
+        <rect x="2" y="2" width="28" height="24" rx="2" class="brand__box"/>
+        <path d="M9 20V8.5l7 7.5 7-7.5V20" class="brand__m"/>
+        <path d="M16 26v5" class="brand__stem"/>
+        <path d="M10 38h12l-6-7z" class="brand__datum"/>
+      </svg>
+      <span class="brand__word">Modus Lab</span>
+    </a>
+    <nav class="nav" id="site-nav" aria-label="Primary">
+      <a href="/#products">What we make</a>
+      <a href="/#apps"><span class="navtag">A</span>Apps</a>
+      <a href="/#engineering"><span class="navtag">B</span>Engineering tools</a>
+      <a href="/explained/" aria-current="page"><span class="navtag">C</span>Explained</a>
+      <a href="/#about">About</a>
+    </nav>
+    <div class="masthead__actions">
+      <button class="theme-toggle" type="button" aria-label="Switch to dark theme" data-theme-toggle>
+        <svg viewBox="0 0 24 24" aria-hidden="true" class="ico ico--moon"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        <svg viewBox="0 0 24 24" aria-hidden="true" class="ico ico--sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
+      <a class="btn btn--small" href="/#contact">Contact</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-menu>
+        <span class="menu-toggle__bars" aria-hidden="true"><i></i><i></i></span><span class="menu-toggle__label">Menu</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="xpage">
+  <div class="wrap">
+    <nav aria-label="Breadcrumb">
+      <ol class="crumbs">
+        <li><a href="/">Modus Lab</a></li>
+        <li><a href="/explained/">C · Explained</a></li>
+        <li><span aria-current="page">C3.1 iPhone Duo</span></li>
+      </ol>
+    </nav>
+
+    <header class="xpage__head">
+      <p class="xcard__no"><span class="catcode">C3</span>C3.1 · Phones &amp; gadgets · 9:07 · 22 Oct 2026<em class="badge badge--beta pre-only">Premieres Thu 22 Oct · 7:15 PM IST</em></p>
+      <h1 class="xpage__title">Why Apple Can&#x27;t Make Enough iPhone Duos</h1>
+      <p class="xpage__lede">Apple&#x27;s first foldable sold out within minutes, and the part that keeps coming up is the hinge. We draw it, explain why a folding screen needs glass thinner than a hair, and do the maths a production engineer does: tolerance stack-up, and how small losses compound.</p>
+    </header>
+
+    <div class="xpage__body">
+      <div>
+        <figure>
+          <div class="player" data-yt="" data-yt-title="Why Apple Can&#x27;t Make Enough iPhone Duos">
+            <a href="https://www.youtube.com/@Modus_Lab" data-yt-play aria-label="Play the video: Why Apple Can&#x27;t Make Enough iPhone Duos (9 minutes 7 seconds)">
+              <img src="/assets/img/explained/iphone-duo.jpg" width="1280" height="720" alt="An isometric drawing of a foldable-phone hinge closing, with numbered balloons for its three jobs: swing, hold the centre flat, and close.">
+              <span class="player__btn">Play · 9:07</span>
+            </a>
+            <div class="player__soon">
+              <span class="player__soon-k">Premieres Thu 22 Oct</span>
+              <span class="player__soon-t">7:15 PM IST</span>
+              <a class="btn" href="https://www.youtube.com/@Modus_Lab?sub_confirmation=1">Subscribe to get notified</a>
+              <span class="player__soon-d">Then press play right here. The write-up below is ready now.</span>
+            </div>
+          </div>
+          <figcaption class="drawing__caption" style="justify-content:flex-start"><span>Fig. C3.1</span> <span class="live-only">The YouTube player loads only when you press play.</span><span class="pre-only">The video premieres Thu 22 Oct, at 7:15 PM IST.</span></figcaption>
+        </figure>
+
+        <section class="xsection" aria-labelledby="ch-title" style="margin-top:40px">
+          <h2 id="ch-title" class="xsection__title">Chapters</h2>
+          <ol class="chapters">
+        <li><a href="https://www.youtube.com/@Modus_Lab" data-yt-start="0"><span class="chapters__t">0:00</span><span class="chapters__name">$2,000 and sold out</span><span class="chapters__go">Play</span></a></li>
+        <li><a href="https://www.youtube.com/@Modus_Lab" data-yt-start="68"><span class="chapters__t">1:08</span><span class="chapters__name">The 100-part hinge</span><span class="chapters__go">Play</span></a></li>
+        <li><a href="https://www.youtube.com/@Modus_Lab" data-yt-start="129"><span class="chapters__t">2:09</span><span class="chapters__name">Glass you can roll like paper</span><span class="chapters__go">Play</span></a></li>
+        <li><a href="https://www.youtube.com/@Modus_Lab" data-yt-start="195"><span class="chapters__t">3:15</span><span class="chapters__name">Pages of a book, and the crease</span><span class="chapters__go">Play</span></a></li>
+        <li><a href="https://www.youtube.com/@Modus_Lab" data-yt-start="236"><span class="chapters__t">3:56</span><span class="chapters__name">Tolerance stack-up</span><span class="chapters__go">Play</span></a></li>
+        <li><a href="https://www.youtube.com/@Modus_Lab" data-yt-start="284"><span class="chapters__t">4:44</span><span class="chapters__name">The yield maths</span><span class="chapters__go">Play</span></a></li>
+        <li><a href="https://www.youtube.com/@Modus_Lab" data-yt-start="356"><span class="chapters__t">5:56</span><span class="chapters__name">The honest part: the 60% report</span><span class="chapters__go">Play</span></a></li>
+        <li><a href="https://www.youtube.com/@Modus_Lab" data-yt-start="403"><span class="chapters__t">6:43</span><span class="chapters__name">Rumours and delivery dates</span><span class="chapters__go">Play</span></a></li>
+        <li><a href="https://www.youtube.com/@Modus_Lab" data-yt-start="437"><span class="chapters__t">7:17</span><span class="chapters__name">Samsung took seven generations</span><span class="chapters__go">Play</span></a></li>
+        <li><a href="https://www.youtube.com/@Modus_Lab" data-yt-start="484"><span class="chapters__t">8:04</span><span class="chapters__name">Marketing, or a ramp?</span><span class="chapters__go">Play</span></a></li>
+          </ol>
+        </section>
+
+        <section class="xsection" aria-labelledby="sum-title">
+          <h2 id="sum-title" class="xsection__title">In short</h2>
+          <div class="prose">
+            <p><b>Sold out in minutes.</b> Pre-orders opened on 16 October at $1,999, and US delivery estimates soon slipped by months. In India it starts at ₹2,99,900. Apple hasn&#x27;t said how many it built.</p>
+            <p><b>The hinge is the hard part.</b> Apple says the hinge is engineered from more than 100 components. It has to swing through 180 degrees, hold the centre of the screen flat, and close with a magnet array, in a phone 5.2 mm thick when open.</p>
+            <p><b>Glass thinner than a hair.</b> Bending stress grows with thickness and shrinks with the bend radius, so ordinary cover glass would shatter. Folding screens use ultra-thin glass about 30 microns thick, in a stack whose layers glide past one another like the pages of a book.</p>
+            <p><b>Small losses compound.</b> If a hinge needs 100 parts and steps to be right, 99.9% each gives about 90% good hinges, 99.5% gives about 61%, and 99% only 37%. One Chinese report put final-assembly yield at about 60%; it&#x27;s unconfirmed, and the video says so.</p>
+          </div>
+        </section>
+
+        <section class="xsection" aria-labelledby="src-title">
+          <h2 id="src-title" class="xsection__title">Sources &amp; credits</h2>
+          <ol class="sources">
+            <li><a href="https://www.apple.com/newsroom/2026/09/apple-unveils-iphone-duo/">Apple Newsroom · Apple unveils iPhone Duo (9 Sep 2026)</a></li>
+            <li><a href="https://www.apple.com/iphone-duo/specs/">Apple · iPhone Duo tech specs</a></li>
+            <li><a href="https://www.apple.com/in/shop/buy-iphone/iphone-duo">Apple India store · iPhone Duo prices</a></li>
+            <li><a href="https://global.samsungdisplay.com/30121">Samsung Display · Learn Display: UTG</a></li>
+            <li><a href="https://www.samsungdisplay.com/eng/media/news/detail/ssdsNews-250722.jsp">Samsung Display · Foldable panel passes 500,000 folds (22 Jul 2025)</a></li>
+            <li><a href="https://counterpointresearch.com/insights/global-foldable-shipments-to-hit-100-million-cumulative-milestone-by-end-of-2026">Counterpoint Research · Foldable shipments forecast (Sep 2026)</a></li>
+            <li><a href="https://eu.36kr.com/en/p/3992545491811078">36Kr · Jiemian report on iPhone Duo production (Sep 2026)</a></li>
+            <li><a href="https://www.macrumors.com/2026/09/29/iphone-duo-reportedly-facing-production-problems/">MacRumors · iPhone Duo reportedly facing production problems (29 Sep 2026)</a></li>
+            <li><a href="https://thenextweb.com/news/iphone-duo-preorders-shipping-january">The Next Web · iPhone Duo sells out, deliveries pushed to 2027</a></li>
+          </ol>
+          <div class="prose"><p>No Apple images are used; the phone and hinge are drawn generically. Photos via Wikimedia Commons: iPhone Duo front and fold by 茅野ふたば (CC BY-SA 4.0), mobile-phone hinge by Ray_go (CC BY-SA 3.0), ETA 2801 watch movement by Micky Aldridge (CC BY 2.0), ultra-thin glass by SCHOTT AG (CC BY-SA 4.0), broken Gorilla Glass by old_s (CC0), Galaxy Z Fold 5 display by Vosveteit.sk (CC BY 3.0), gauge blocks by NIST (public domain), electronics factory in Shenzhen by Steve Jurvetson (CC BY 2.0), Galaxy Z Fold 7 and Z Flip 7 by Matabalt (CC0). Narration voice generated with Kokoro TTS.</p></div>
+        </section>
+
+        <section class="xsection" aria-labelledby="tr-title">
+          <h2 id="tr-title" class="xsection__title">Transcript</h2>
+          <details class="transcript">
+            <summary>Read the full narration</summary>
+            <div class="transcript__body">
+          <h3>0:00 · $2,000 and sold out</h3>
+          <p>Two thousand dollars, and you still can&#x27;t buy one.</p>
+          <p>On the sixteenth of October, Apple opened pre-orders for its first foldable phone, the iPhone Duo. Within minutes, launch-day stock was gone. Half an hour later, Apple&#x27;s own US store was quoting the twenty-fifth of January for every colour and every size.</p>
+          <p>On eBay, a pre-order for the two-terabyte model, which costs three thousand, one hundred and ninety-nine dollars, was marked sold at five thousand.</p>
+          <p>In India, the Duo starts at two lakh, ninety-nine thousand, nine hundred rupees. The two-terabyte model is four lakh, forty-nine thousand, nine hundred.</p>
+          <p>So why can&#x27;t the richest phone company on Earth make enough of them?</p>
+          <p>Apple hasn&#x27;t said. But it has told us what&#x27;s inside. And there&#x27;s one part that keeps coming up. The hinge.</p>
+          <p>So let&#x27;s do what engineers do. Let&#x27;s take it apart.</p>
+          <h3>1:08 · The 100-part hinge</h3>
+          <p>Apple says the Duo&#x27;s hinge is engineered from more than one hundred components.</p>
+          <p>Compare that with the flip phones of twenty years ago. Their hinge was often just a pin, a spring and a barrel. A handful of parts. If it wobbled a bit, nobody cared, because the screen didn&#x27;t bend.</p>
+          <p>The Duo&#x27;s hinge has a much harder job. Balloon one: it has to swing two halves of a phone through a hundred and eighty degrees, every time, thousands of times a year. Balloon two: when it&#x27;s open, it has to hold the middle of a seven point six inch screen perfectly flat. Apple says the hinge supports the centre of the display. Balloon three: when it&#x27;s closed, it has to bring the two halves together, with a row of magnets, so they meet cleanly.</p>
+          <p>And it has to do all of that inside a phone that&#x27;s five point two millimetres thick when open. That&#x27;s about three coins stacked together.</p>
+          <h3>2:09 · Glass you can roll like paper</h3>
+          <p>Now look at what it&#x27;s carrying.</p>
+          <p>The inner screen is a stack of thin layers. Apple describes a protective polymer on top, high-strength glass above and below the flexible display panel, and a titanium plate at the bottom.</p>
+          <p>Here&#x27;s the problem with glass. Bending stress in a sheet goes up with its thickness, and down with the radius of the bend.</p>
+          <p>Apple hasn&#x27;t published the bend radius. So let&#x27;s take two millimetres as an example. Bend the glass on a normal phone, about half a millimetre thick, that tightly, and the stress would be close to nine thousand megapascals. No glass survives that.</p>
+          <p>Now make the glass thirty micrometres thick. That&#x27;s what Samsung Display used in its first folding glass, thinner than a human hair. The stress drops to about five hundred megapascals. Still high. But chemically strengthened glass can live with it.</p>
+          <p>That&#x27;s why folding phones use glass you can roll like paper.</p>
+          <h3>3:15 · Pages of a book, and the crease</h3>
+          <p>Apple adds one more trick. It says custom adhesives let the layers glide past one another, like the pages of a book. Bend a closed book and the pages slide. Glue them together and the spine cracks. Letting each layer slide means each one only feels the stress of its own thickness.</p>
+          <p>But this only works if the hinge puts the screen in exactly the right place. A fraction of a millimetre off, and the crease gets deeper, the screen ripples, or the halves don&#x27;t close flat. Early reviewers were split. Some could barely see the crease. Others could see it at certain angles.</p>
+          <h3>3:56 · Tolerance stack-up</h3>
+          <p>And that brings us to the real reason this is hard to make. Tolerance.</p>
+          <p>No part is made to its exact size. Every part has a small allowed error. Say a hinge has ten parts in a chain, and each one is allowed to be off by one hundredth of a millimetre. In the worst case, all ten errors line up in the same direction. Now the total error is a tenth of a millimetre.</p>
+          <p>That&#x27;s called tolerance stack-up. In the real world, the errors usually partly cancel out, and the typical total is closer to three hundredths. But some phones will land near the worst case. And on a folding screen, a tenth of a millimetre is a visible crease or a gap between the halves.</p>
+          <h3>4:44 · The yield maths</h3>
+          <p>So engineers have two choices. Make every part more precise, which is slower and more expensive. Or measure every finished hinge and throw away the ones that don&#x27;t fit.</p>
+          <p>Either way, you lose output. And here&#x27;s where the maths gets brutal.</p>
+          <p>Imagine each of the hundred parts, or each step in putting them together, comes out right ninety-nine point nine percent of the time. That sounds excellent. But the whole hinge only works if every one of them is right. So you multiply. Ninety-nine point nine percent, a hundred times over, gives you about ninety percent good hinges.</p>
+          <p>Drop each part to ninety-nine point five percent, and you&#x27;re down to about sixty percent.</p>
+          <p>At ninety-nine percent, it&#x27;s thirty-seven percent. Nearly two in three hinges fail.</p>
+          <p>This is a simplified model. Real factories check parts before they go in, and some faults can be reworked. But it shows why a part with a hundred pieces is so unforgiving. Tiny losses at each step compound.</p>
+          <h3>5:56 · The honest part: the 60% report</h3>
+          <p>Now, the honest part.</p>
+          <p>Here&#x27;s what we know, and what we don&#x27;t.</p>
+          <p>In late September, China&#x27;s Jiemian News reported that only slightly more than sixty percent of assembled Duos were passing Apple&#x27;s checks. That figure comes from one anonymous source near Foxconn. Apple hasn&#x27;t confirmed it. And it&#x27;s the yield of the whole finished phone, not just the hinge.</p>
+          <p>The same report said the hinge parts and the folding screens had both had low yields, late deliveries and design changes. And it said that, under Apple&#x27;s current standards, the line might need six months to a year to mature. Suppliers were reportedly waiting to hear whether Apple would relax those standards.</p>
+          <h3>6:43 · Rumours and delivery dates</h3>
+          <p>One tech site went further. Citing Chinese media, it said Apple Store staff blamed the hinge for the short supply. We couldn&#x27;t trace that to a named source, so treat it as a rumour.</p>
+          <p>The delivery dates also depend on who you ask. AppleInsider first saw orders slip to late November. Apple&#x27;s own store showed late January soon after. Carriers have quoted earlier dates.</p>
+          <p>And Apple has never said how many Duos it built. Most launches, it doesn&#x27;t.</p>
+          <h3>7:17 · Samsung took seven generations</h3>
+          <p>What is on the record: the research firm Counterpoint forecasts up to six million foldable iPhones shipped this year. That would already make Apple the number two foldable maker, behind Samsung. For comparison, the Jiemian report says a single iPhone Pro model usually ships twenty to thirty million in a full cycle.</p>
+          <p>And Samsung shows how long this takes. It has been making folding phones since twenty nineteen. Last year, Samsung Display said its latest folding panel survived five hundred thousand folds in an independent test. That&#x27;s more than ten years of normal use. It took seven generations to get there.</p>
+          <p>Apple is on generation one.</p>
+          <h3>8:04 · Marketing, or a ramp?</h3>
+          <p>So is the shortage marketing? Probably not. A two-thousand-dollar phone that leaves money on the table for three months isn&#x27;t a strategy. It looks more like a factory still learning to build a part with a hundred pieces, where every piece has to be right.</p>
+          <p>The good news is that yield problems are usually temporary. The line gets tuned. The parts get more consistent. The losses shrink. That&#x27;s what ramping up means.</p>
+          <p>But for now, the most expensive iPhone ever made is limited by its smallest parts.</p>
+          <p>So here&#x27;s our question for you. Would you pay three lakh rupees for a first-generation hinge? Or would you wait for version two?</p>
+            </div>
+          </details>
+        </section>
+      </div>
+
+      <aside aria-labelledby="facts-title">
+        <h2 id="facts-title" class="xsection__title" style="font-size:1.25rem">Key facts</h2>
+        <div class="facts" style="margin-top:14px">
+          <div class="tb"><span class="tb__k">Price</span><p class="tb__v">from $1,999</p><p class="tb__d">₹2,99,900 in India for 256 GB. Pre-orders 16 Oct, on sale 23 Oct.</p></div>
+          <div class="tb"><span class="tb__k">Hinge</span><p class="tb__v">100+ parts</p><p class="tb__d">Apple: supports the centre of the display, with an integrated magnet array.</p></div>
+          <div class="tb"><span class="tb__k">Thickness</span><p class="tb__v">5.2 mm open</p><p class="tb__d">11.3 mm closed; 254 g. Inner screen 7.6&quot;, outer 5.4&quot;.</p></div>
+          <div class="tb"><span class="tb__k">Folding glass</span><p class="tb__v">~30 µm</p><p class="tb__d">Samsung&#x27;s first ultra-thin glass. Ordinary cover glass is about 0.5 mm.</p></div>
+          <div class="tb"><span class="tb__k">Yield maths</span><p class="tb__v">0.995¹⁰⁰ ≈ 61%</p><p class="tb__d">100 steps at 99.5% each. At 99.9% it&#x27;s about 90%; at 99% about 37%.</p></div>
+          <div class="tb"><span class="tb__k">Reported yield</span><p class="tb__v">~60%</p><p class="tb__d">Final assembly, one anonymous source (Jiemian). Not confirmed by Apple.</p></div>
+        </div>
+        <p class="drawing__caption facts__caption" style="justify-content:flex-start"><span>Note</span> Apple&#x27;s figures from its newsroom and spec page; the yield report is unconfirmed.</p>
+      </aside>
+    </div>
+
+    <aside class="channel-cta" aria-label="Modus Lab on YouTube">
+      <div>
+        <p class="channel-cta__title">Curious things, <mark>explained.</mark></p>
+        <p>New explainers on the Modus Lab YouTube channel.</p>
+      </div>
+      <a class="btn" href="https://www.youtube.com/@Modus_Lab?sub_confirmation=1">Subscribe · @Modus_Lab</a>
+    </aside>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__row">
+    <p>© <span data-year>2026</span> Modus Lab · Pune, India</p>
+    <ul class="footer__links">
+      <li><a href="https://www.youtube.com/@Modus_Lab">YouTube · @Modus_Lab</a></li>
+      <li><a href="/medistock/privacy-policy.html">MediStock privacy policy</a></li>
+      <li><a href="/familymeds/privacy-policy.html">FamilyMeds privacy policy</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="/assets/main.js?v=18" defer></script>
+</body>
+</html>

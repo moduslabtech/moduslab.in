@@ -34,13 +34,6 @@
     if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
   } catch (e) {}
 
-  // C · Explained: before the latest video's release time, its card says "today at 7:15 PM".
-  // Removed automatically at release, so no second deploy is needed.
-  (function () {
-    var left = Date.parse('2026-10-20T19:15:00+05:30') - Date.now(), r = document.documentElement;
-    if (left > 0) { r.classList.add('pre-release'); if (left < 864e5) setTimeout(function () { r.classList.remove('pre-release'); }, left); }
-  })();
-
   // Intro: the studio mark draws itself once per visit, then flies into the header.
   // Skipped without JavaScript, with reduced motion, and on any tap, key or scroll.
   (function () {
@@ -311,15 +304,17 @@
               </div>
             </div>
             <div class="vpanel__cat">
-              <p class="catline"><span class="catcode">C1</span>Cars &amp; vehicles</p>
+              <p class="catline"><span class="catcode">C1</span>Cars · <span class="catcode">C2</span>AI · <span class="catcode">C3</span>Phones</p>
               <ul class="vpanel__products">
-                <li><b>Tesla Roadster</b><span>fans, thrusters and a flying car</span><em class="badge badge--live live-only">New video</em><em class="badge badge--beta pre-only">Today · 7:15 PM IST</em></li>
+                <li data-release="2026-10-22T19:15:00+05:30"><b>iPhone Duo</b><span>why Apple can&#x27;t make enough</span><em class="badge badge--live live-only">New video</em><em class="badge badge--beta pre-only">Thu 22 Oct · 7:15 PM</em></li>
+                <li data-release="2026-10-21T19:15:00+05:30"><b>AI bubble</b><span>what survives if it pops</span><em class="badge badge--live live-only">New video</em><em class="badge badge--beta pre-only">Wed 21 Oct · 7:15 PM</em></li>
+                <li data-release="2026-10-20T19:15:00+05:30"><b>Tesla Roadster</b><span>fans, thrusters and a flying car</span><em class="badge badge--live live-only">New video</em><em class="badge badge--beta pre-only">Today · 7:15 PM IST</em></li>
               </ul>
             </div>
             <span class="vpanel__go">Explore C · Explained <span aria-hidden="true">↓</span></span>
           </div>
           <div class="vpanel__art vpanel__art--c" aria-hidden="true">
-            <img src="assets/img/explained/tesla-roadster-2028.jpg" width="1280" height="720" alt="" loading="lazy" decoding="async">
+            <img src="assets/img/explained/ai-bubble.jpg" width="1280" height="720" alt="" loading="lazy" decoding="async">
             <span class="vpanel__play"></span>
           </div>
         </a>
@@ -672,7 +667,7 @@
         <dl class="defs">
           <div><dt>What it is</dt><dd>Short videos that take things apart: how they work, and what's real.</dd></div>
           <div><dt>Where</dt><dd>On YouTube at <a class="textlink" href="https://www.youtube.com/@Modus_Lab">@Modus_Lab</a>, with a written page for each video.</dd></div>
-          <div><dt>Categories</dt><dd><span class="catcode">C1</span>Cars &amp; vehicles. More to come.</dd></div>
+          <div><dt>Categories</dt><dd><span class="catcode">C1</span>Cars &amp; vehicles · <span class="catcode">C2</span>AI &amp; infrastructure · <span class="catcode">C3</span>Phones &amp; gadgets.</dd></div>
         </dl>
       </div>
     </div>
@@ -680,13 +675,41 @@
     <div class="wrap">
       <ul class="xlist">
         <li>
-          <a class="xcard" href="/explained/tesla-roadster-2028/">
+          <a class="xcard" href="/explained/iphone-duo/" data-release="2026-10-22T19:15:00+05:30">
+            <span class="xcard__thumb">
+              <img src="assets/img/explained/iphone-duo.jpg" width="1280" height="720" loading="lazy" decoding="async" alt="">
+              <span class="xcard__dur">9:07</span>
+            </span>
+            <span>
+              <span class="xcard__no"><span class="catcode">C3</span>C3.1 · 22 Oct 2026<em class="badge badge--live live-only">New</em><em class="badge badge--beta pre-only">Premieres Thu 22 Oct · 7:15 PM IST</em></span>
+              <span class="xcard__title" role="heading" aria-level="3">Why Apple Can&#x27;t Make Enough iPhone Duos</span>
+              <span class="xcard__desc">Apple&#x27;s first foldable sold out in minutes. We draw the 100-part hinge, the glass thinner than a hair, and the yield maths that turns 99.5% per part into about 60% good hinges.</span>
+              <span class="xcard__go"><span class="live-only">Watch and read</span><span class="pre-only">Read now · video at 7:15 PM</span> <span aria-hidden="true">→</span></span>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a class="xcard" href="/explained/ai-bubble/" data-release="2026-10-21T19:15:00+05:30">
+            <span class="xcard__thumb">
+              <img src="assets/img/explained/ai-bubble.jpg" width="1280" height="720" loading="lazy" decoding="async" alt="">
+              <span class="xcard__dur">9:36</span>
+            </span>
+            <span>
+              <span class="xcard__no"><span class="catcode">C2</span>C2.1 · 21 Oct 2026<em class="badge badge--live live-only">New</em><em class="badge badge--beta pre-only">Premieres Wed 21 Oct · 7:15 PM IST</em></span>
+              <span class="xcard__title" role="heading" aria-level="3">If the AI Bubble Pops, This Is What Survives</span>
+              <span class="xcard__desc">$750 billion this year, mostly on AI data centres. We take a one-gigawatt campus apart: what it costs, what wears out first, and what would still be standing if the bubble pops.</span>
+              <span class="xcard__go"><span class="live-only">Watch and read</span><span class="pre-only">Read now · video at 7:15 PM</span> <span aria-hidden="true">→</span></span>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a class="xcard" href="/explained/tesla-roadster-2028/" data-release="2026-10-20T19:15:00+05:30">
             <span class="xcard__thumb">
               <img src="assets/img/explained/tesla-roadster-2028.jpg" width="1280" height="720" loading="lazy" decoding="async" alt="">
               <span class="xcard__dur">7:56</span>
             </span>
             <span>
-              <span class="xcard__no"><span class="catcode">C1</span>C1.1 · Latest video<em class="badge badge--live live-only">New</em><em class="badge badge--beta pre-only">Today · 7:15 PM IST</em></span>
+              <span class="xcard__no"><span class="catcode">C1</span>C1.1 · 20 Oct 2026<em class="badge badge--live live-only">New</em><em class="badge badge--beta pre-only">Today · 7:15 PM IST</em></span>
               <span class="xcard__title" role="heading" aria-level="3">Tesla's New Roadster Can Fly?! The Engineering Explained</span>
               <span class="xcard__desc">Fans that suck it onto the road, SpaceX thrusters that fire it to 60 mph in 0.81 seconds, and a version that flies. How it works, and what's real.</span>
               <span class="xcard__go"><span class="live-only">Watch and read</span><span class="pre-only">Read now · video at 7:15 PM</span> <span aria-hidden="true">→</span></span>
@@ -798,6 +821,13 @@
   </div>
 </footer>
 
+<script>
+  // Each [data-release] card shows its "premieres" badge until its release time, then switches to "new" by itself.
+  document.querySelectorAll('[data-release]').forEach(function (el) {
+    var left = Date.parse(el.getAttribute('data-release')) - Date.now();
+    if (left > 0) { el.classList.add('pre-release'); if (left < 864e5) setTimeout(function () { el.classList.remove('pre-release'); }, left); }
+  });
+</script>
 <script src="assets/main.js?v=18" defer></script>
 </body>
 </html>
