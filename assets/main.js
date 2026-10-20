@@ -265,4 +265,35 @@
       setTimeout(start, motionOK ? 450 : 0);
     });
   }
+  /* ---------- C · Explained: click-to-load YouTube player ----------
+     The page shows our own thumbnail and links to YouTube. Only when someone
+     presses play (or a chapter) do we load the privacy-enhanced embed. */
+  var player = document.querySelector('[data-yt]');
+  if (player) {
+    var ytId = player.getAttribute('data-yt');
+    var ytTitle = player.getAttribute('data-yt-title') || 'YouTube video';
+    var load = function (start) {
+      var src = 'https://www.youtube-nocookie.com/embed/' + ytId + '?autoplay=1&rel=0&modestbranding=1' + (start ? '&start=' + start : '');
+      var frame = player.querySelector('iframe');
+      if (!frame) {
+        frame = document.createElement('iframe');
+        frame.title = ytTitle;
+        frame.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+        frame.allowFullscreen = true;
+        frame.referrerPolicy = 'strict-origin-when-cross-origin';
+        player.textContent = '';
+        player.appendChild(frame);
+      }
+      frame.src = src;
+    };
+    var facade = player.querySelector('[data-yt-play]');
+    if (facade) facade.addEventListener('click', function (e) { e.preventDefault(); load(0); });
+    document.querySelectorAll('[data-yt-start]').forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        e.preventDefault();
+        load(parseInt(a.getAttribute('data-yt-start'), 10) || 0);
+        player.scrollIntoView({ behavior: motionOK ? 'smooth' : 'auto', block: 'center' });
+      });
+    });
+  }
 })();

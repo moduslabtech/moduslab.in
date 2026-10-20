@@ -8,6 +8,13 @@
 - [FamilyMeds](https://moduslab.in/#familymeds): Android app for families managing medicines at home: full-screen dose alarms that ring like a call even offline, missed-dose alerts to other family members, stock countdown and reorder reminders. Languages: English, Hindi, Tamil, Telugu, Kannada, Marathi. Free, supported by non-personalised banner ads (never on alarms or alerts). Status: in development.
 - [StackSense](https://moduslab.in/#stacksense): web app for tolerance stack-up analysis: axial, radial and angular stacks, worst-case and RSS results, Monte Carlo simulation, GD&T callouts as tolerance inputs, contribution-to-variance ranking and PDF reports for design reviews. For mechanical, design and quality engineers. Status: in development, waitlist open.
 
+## Explained (YouTube)
+
+Modus Lab also makes explainer videos on YouTube (https://www.youtube.com/@Modus_Lab), tagline "Curious things, explained". Each video has a written page with chapters, key facts, sources and a full transcript.
+
+- [Explained index](https://moduslab.in/explained/)
+- [Tesla's New Roadster Can Fly?! The Engineering Explained](https://moduslab.in/explained/tesla-roadster-2028/): the 2028 Tesla Roadster's four versions, rear-wheel-drive powertrain, fan downforce system, SpaceX cold-gas thrusters, the reveal stunts and a reality check. 7:56, 20 Oct 2026.
+
 ## How MediStock and FamilyMeds connect
 
 A prescription billed in MediStock Clinic carries a QR code (or six-character code). The patient scans it in FamilyMeds and the medicines become dose alarms at home, with no retyping.

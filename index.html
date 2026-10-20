@@ -25,7 +25,7 @@
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 
 <link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/styles.css?v=20">
+<link rel="stylesheet" href="assets/styles.css?v=21">
 
 <script>
   // Apply a saved theme before first paint so the page never flashes the wrong one.
@@ -33,6 +33,13 @@
     var t = localStorage.getItem('ml-theme');
     if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
   } catch (e) {}
+
+  // C · Explained: before the latest video's release time, its card says "today at 7:15 PM".
+  // Removed automatically at release, so no second deploy is needed.
+  (function () {
+    var left = Date.parse('2026-10-20T19:15:00+05:30') - Date.now(), r = document.documentElement;
+    if (left > 0) { r.classList.add('pre-release'); if (left < 864e5) setTimeout(function () { r.classList.remove('pre-release'); }, left); }
+  })();
 
   // Intro: the studio mark draws itself once per visit, then flies into the header.
   // Skipped without JavaScript, with reduced motion, and on any tap, key or scroll.
@@ -86,7 +93,7 @@
   "url": "https://moduslab.in/",
   "logo": "https://moduslab.in/assets/img/icon-512.png",
   "description": "Udyam-registered product studio in Pune, India, making MediStock Clinic, FamilyMeds and StackSense.",
-  "sameAs": ["https://github.com/moduslabtech"],
+  "sameAs": ["https://github.com/moduslabtech", "https://www.youtube.com/@Modus_Lab"],
   "email": "support@moduslab.in",
   "address": { "@type": "PostalAddress", "addressLocality": "Pune", "addressRegion": "Maharashtra", "addressCountry": "IN" },
   "makesOffer": [
@@ -171,6 +178,7 @@
       <a href="#products">What we make</a>
       <a href="#apps"><span class="navtag">A</span>Apps</a>
       <a href="#engineering"><span class="navtag">B</span>Engineering tools</a>
+      <a href="/explained/"><span class="navtag">C</span>Explained</a>
       <a href="#about">About</a>
     </nav>
     <div class="masthead__actions">
@@ -630,6 +638,44 @@
     </article>
   </section>
 
+  <!-- ===================== C · EXPLAINED ===================== -->
+  <section id="explained" class="vertical vertical--c" aria-labelledby="exp-title">
+    <div class="wrap vhead vhead--c">
+      <div class="vhead__copy">
+        <p class="vhead__tag"><span class="datum datum--sm" aria-hidden="true"><span class="datum__box">C</span><span class="datum__tri"></span></span>C · Explained</p>
+        <h2 id="exp-title" class="vhead__title">Curious things, explained: the engineering behind what people are talking about.</h2>
+        <dl class="defs">
+          <div><dt>What it is</dt><dd>Short videos that take things apart: how they work, and what's real.</dd></div>
+          <div><dt>Where</dt><dd>On YouTube at <a class="textlink" href="https://www.youtube.com/@Modus_Lab">@Modus_Lab</a>, with a written page for each video.</dd></div>
+          <div><dt>Categories</dt><dd><span class="catcode">C1</span>Cars &amp; vehicles. More to come.</dd></div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <ul class="xlist">
+        <li>
+          <a class="xcard" href="/explained/tesla-roadster-2028/">
+            <span class="xcard__thumb">
+              <img src="assets/img/explained/tesla-roadster-2028.jpg" width="1280" height="720" loading="lazy" decoding="async" alt="">
+              <span class="xcard__dur">7:56</span>
+            </span>
+            <span>
+              <span class="xcard__no"><span class="catcode">C1</span>C1.1 · Latest video<em class="badge badge--live live-only">New</em><em class="badge badge--beta pre-only">Today · 7:15 PM IST</em></span>
+              <span class="xcard__title" role="heading" aria-level="3">Tesla's New Roadster Can Fly?! The Engineering Explained</span>
+              <span class="xcard__desc">Fans that suck it onto the road, SpaceX thrusters that fire it to 60 mph in 0.81 seconds, and a version that flies. How it works, and what's real.</span>
+              <span class="xcard__go"><span class="live-only">Watch and read</span><span class="pre-only">Read now · video at 7:15 PM</span> <span aria-hidden="true">→</span></span>
+            </span>
+          </a>
+        </li>
+      </ul>
+      <div class="xmore">
+        <a class="btn btn--ghost" href="/explained/">All explainers</a>
+        <a class="textlink" href="https://www.youtube.com/@Modus_Lab?sub_confirmation=1">Subscribe on YouTube</a>
+      </div>
+    </div>
+  </section>
+
   <!-- PRINCIPLES as a drawing title block -->
   <section id="principles" class="principles" aria-labelledby="principles-title">
     <div class="wrap">
@@ -704,6 +750,12 @@
             <li><a href="/stacksense/">Open StackSense</a></li>
           </ul>
         </div>
+        <div>
+          <p class="contact__k"><span class="navtag">C</span>Explained</p>
+          <ul class="contact__links">
+            <li><a href="https://www.youtube.com/@Modus_Lab">Watch on YouTube</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -721,6 +773,6 @@
   </div>
 </footer>
 
-<script src="assets/main.js?v=17" defer></script>
+<script src="assets/main.js?v=18" defer></script>
 </body>
 </html>
