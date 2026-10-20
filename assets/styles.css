@@ -1282,3 +1282,27 @@ html[data-intro="skip"] .intro { opacity: 0; transition: opacity .3s ease; }
 .player__soon-t { font-weight: 820; font-variation-settings: "wdth" 112; font-size: clamp(1.75rem, 1.2rem + 3vw, 3.25rem); line-height: 1; letter-spacing: -0.02em; }
 .player__soon .btn { --b: var(--amber); color: var(--on-amber); margin-top: 8px; }
 .player__soon-d { font-size: .875rem; color: oklch(0.9 0 0); }
+
+/* Hero tile C · Explained: a full-width strip under A and B */
+.vpanel--c {
+  grid-column: 1 / -1; min-height: 0; grid-template-rows: none;
+  grid-template-columns: minmax(0, 1fr) minmax(0, .85fr); align-items: center; gap: clamp(20px, 3vw, 48px);
+  background: color-mix(in oklab, var(--amber) 13%, var(--bg));
+  border-color: color-mix(in oklab, var(--amber) 50%, var(--line));
+}
+.vpanel__body { display: grid; gap: 20px; align-content: start; }
+.vpanel--c .vpanel__products li { background: color-mix(in oklab, var(--bg) 80%, transparent); }
+.vpanel__art--c {
+  min-height: 0; aspect-ratio: 16 / 9; border-radius: 16px; overflow: hidden; box-shadow: var(--shadow);
+  rotate: 1.5deg; transition: rotate .6s var(--ease-out), transform .6s var(--ease-out);
+}
+.vpanel__art--c img { width: 100%; height: 100%; object-fit: cover; }
+.vpanel--c:hover .vpanel__art--c { rotate: 0deg; transform: scale(1.02); }
+.vpanel__play {
+  position: absolute; left: 12px; top: 12px; display: inline-flex; align-items: center; gap: 8px;
+  height: 32px; padding: 0 12px 0 10px; border-radius: 999px; background: var(--amber); color: var(--on-amber);
+  font-size: .8125rem; font-weight: 750; font-variant-numeric: tabular-nums; box-shadow: 0 6px 18px oklch(0 0 0 / .3);
+}
+.vpanel__play::before { content: ""; border-block: 6px solid transparent; border-left: 10px solid currentColor; }
+.vpanel__play::after { content: "7:56"; }
+@media (max-width: 900px) { .vpanel--c { grid-template-columns: 1fr; } }
