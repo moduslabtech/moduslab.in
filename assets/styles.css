@@ -189,6 +189,7 @@ a { color: inherit; }
 
 .nav { display: flex; gap: 28px; }
 .nav a {
+  display: inline-flex; align-items: center;
   text-decoration: none; font-weight: 550; font-size: .9375rem; color: var(--ink-2);
   padding: 8px 0; position: relative; transition: color .2s;
 }
@@ -1192,11 +1193,23 @@ html[data-intro="skip"] .intro { opacity: 0; transition: opacity .3s ease; }
 .crumbs li + li::before { content: "/"; margin-right: 8px; color: var(--line-strong); }
 .crumbs a { text-decoration: none; }
 .crumbs a:hover { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
-.xpage__head { margin-top: 20px; max-width: 52rem; }
+.xpage__head { grid-area: head; max-width: 52rem; }
 .xpage__title { margin-top: 14px; font-weight: 820; font-variation-settings: "wdth" 112; font-size: clamp(2rem, 1.3rem + 3vw, 3.75rem); line-height: 1.02; letter-spacing: -0.03em; }
 .xpage__lede { margin-top: 18px; font-size: 1.1875rem; color: var(--ink-2); max-width: 44em; }
-.xpage__body { display: grid; grid-template-columns: minmax(0, 1fr) minmax(260px, 340px); gap: clamp(32px, 5vw, 72px); align-items: start; margin-top: clamp(36px, 5vw, 64px); }
-@media (max-width: 900px) { .xpage__body { grid-template-columns: 1fr; } }
+/* Desktop: title, video and write-up on the left; key facts run down the right from the title line.
+   Phone: title, video, key facts, then the write-up. */
+.xpage__body {
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(260px, 340px); column-gap: clamp(32px, 5vw, 72px);
+  grid-template-areas: "head facts" "video facts" "main facts"; grid-template-rows: auto auto 1fr;
+  align-items: start; margin-top: 20px;
+}
+.xpage__video { grid-area: video; margin: clamp(28px, 4vw, 44px) 0 0; min-width: 0; }
+.xpage__facts { grid-area: facts; }
+.xpage__main { grid-area: main; min-width: 0; }
+@media (max-width: 900px) {
+  .xpage__body { grid-template-columns: minmax(0, 1fr); grid-template-areas: "head" "video" "facts" "main"; grid-template-rows: none; }
+  .xpage__facts { margin-top: 40px; }
+}
 .xsection { margin-top: clamp(48px, 6vw, 80px); }
 .xsection__title { font-weight: 800; font-variation-settings: "wdth" 110; font-size: clamp(1.5rem, 1.2rem + 1.2vw, 2.125rem); line-height: 1.1; letter-spacing: -0.02em; }
 .prose { margin-top: 16px; color: var(--ink-2); max-width: 42em; }
