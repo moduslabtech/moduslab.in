@@ -16,6 +16,7 @@ Modus Lab also makes explainer videos on YouTube (https://www.youtube.com/@Modus
 - [Tesla's New Roadster Can Fly?! The Engineering Explained](https://moduslab.in/explained/tesla-roadster-2028/): the 2028 Tesla Roadster's four versions, rear-wheel-drive powertrain, fan downforce system, SpaceX cold-gas thrusters, the reveal stunts and a reality check. 7:56, 20 Oct 2026.
 - [If the AI Bubble Pops, This Is What Survives](https://moduslab.in/explained/ai-bubble/): what a one-gigawatt AI data centre costs, why gas turbines and power transformers are the bottleneck, Gartner's $8.5T-versus-$3.6T revenue gap, and what infrastructure would outlast a bubble (the dot-com fibre comparison). 9:36, premieres 21 Oct 2026.
 - [Why Apple Can't Make Enough iPhone Duos](https://moduslab.in/explained/iphone-duo/): the iPhone Duo's 100-part hinge, ultra-thin folding glass, tolerance stack-up and how per-part yield compounds, with the unconfirmed ~60% yield report labelled as such. 9:07, premieres 22 Oct 2026.
+- [How India's Bullet Train Tunnels Under the Sea in Mumbai](https://moduslab.in/explained/bullet-train-tunnel/): the Mumbai–Ahmedabad bullet train's 21 km tunnel from BKC to Shilphata, about 7 km under Thane Creek; the 13.6 m Mixshield tunnel boring machines, slurry face support and concrete rings, with what's unconfirmed (how much is under open water, the pace, the revised cost) labelled as such. 7:40, premieres 23 Oct 2026.
 
 ## How MediStock and FamilyMeds connect
 

@@ -36,11 +36,102 @@
   // Before the video's release time (or while it has no YouTube id yet), show "premieres" instead of the player.
   // The class is removed automatically at release, so no second deploy is needed.
   (function () {
-    var hasId = false, left = Date.parse('2026-10-22T19:15:00+05:30') - Date.now(), r = document.documentElement;
+    var hasId = true, left = Date.parse('2026-10-22T19:15:00+05:30') - Date.now(), r = document.documentElement;
     if (left > 0 || !hasId) { r.classList.add('pre-release'); if (hasId && left < 864e5) setTimeout(function () { r.classList.remove('pre-release'); }, left); }
   })();
 </script>
-
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "Why Apple Can't Make Enough iPhone Duos",
+  "description": "Apple's first foldable sold out in minutes. We draw the 100-part hinge, the glass thinner than a hair, and the yield maths that turns 99.5% per part into about 60% good hinges.",
+  "thumbnailUrl": "https://moduslab.in/assets/img/explained/iphone-duo.jpg",
+  "uploadDate": "2026-10-22T19:15:00+05:30",
+  "duration": "PT9M7S",
+  "embedUrl": "https://www.youtube-nocookie.com/embed/hXTcaBiYYEA",
+  "url": "https://moduslab.in/explained/iphone-duo/",
+  "inLanguage": "en",
+  "publisher": {
+    "@id": "https://moduslab.in/#org",
+    "@type": "Organization",
+    "name": "Modus Lab",
+    "url": "https://moduslab.in/"
+  },
+  "hasPart": [
+    {
+      "@type": "Clip",
+      "name": "$2,000 and sold out",
+      "startOffset": 0,
+      "endOffset": 68,
+      "url": "https://www.youtube.com/watch?v=hXTcaBiYYEA&t=0s"
+    },
+    {
+      "@type": "Clip",
+      "name": "The 100-part hinge",
+      "startOffset": 68,
+      "endOffset": 129,
+      "url": "https://www.youtube.com/watch?v=hXTcaBiYYEA&t=68s"
+    },
+    {
+      "@type": "Clip",
+      "name": "Glass you can roll like paper",
+      "startOffset": 129,
+      "endOffset": 195,
+      "url": "https://www.youtube.com/watch?v=hXTcaBiYYEA&t=129s"
+    },
+    {
+      "@type": "Clip",
+      "name": "Pages of a book, and the crease",
+      "startOffset": 195,
+      "endOffset": 236,
+      "url": "https://www.youtube.com/watch?v=hXTcaBiYYEA&t=195s"
+    },
+    {
+      "@type": "Clip",
+      "name": "Tolerance stack-up",
+      "startOffset": 236,
+      "endOffset": 284,
+      "url": "https://www.youtube.com/watch?v=hXTcaBiYYEA&t=236s"
+    },
+    {
+      "@type": "Clip",
+      "name": "The yield maths",
+      "startOffset": 284,
+      "endOffset": 356,
+      "url": "https://www.youtube.com/watch?v=hXTcaBiYYEA&t=284s"
+    },
+    {
+      "@type": "Clip",
+      "name": "The honest part: the 60% report",
+      "startOffset": 356,
+      "endOffset": 403,
+      "url": "https://www.youtube.com/watch?v=hXTcaBiYYEA&t=356s"
+    },
+    {
+      "@type": "Clip",
+      "name": "Rumours and delivery dates",
+      "startOffset": 403,
+      "endOffset": 437,
+      "url": "https://www.youtube.com/watch?v=hXTcaBiYYEA&t=403s"
+    },
+    {
+      "@type": "Clip",
+      "name": "Samsung took seven generations",
+      "startOffset": 437,
+      "endOffset": 484,
+      "url": "https://www.youtube.com/watch?v=hXTcaBiYYEA&t=437s"
+    },
+    {
+      "@type": "Clip",
+      "name": "Marketing, or a ramp?",
+      "startOffset": 484,
+      "endOffset": 547,
+      "url": "https://www.youtube.com/watch?v=hXTcaBiYYEA&t=484s"
+    }
+  ]
+}
+</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -120,8 +211,8 @@
       <p class="xpage__lede">Apple&#x27;s first foldable sold out within minutes, and the part that keeps coming up is the hinge. We draw it, explain why a folding screen needs glass thinner than a hair, and do the maths a production engineer does: tolerance stack-up, and how small losses compound.</p>
     </header>
       <figure class="xpage__video">
-          <div class="player" data-yt="" data-yt-title="Why Apple Can&#x27;t Make Enough iPhone Duos">
-            <a href="https://www.youtube.com/@Modus_Lab" data-yt-play aria-label="Play the video: Why Apple Can&#x27;t Make Enough iPhone Duos (9 minutes 7 seconds)">
+          <div class="player" data-yt="hXTcaBiYYEA" data-yt-title="Why Apple Can&#x27;t Make Enough iPhone Duos">
+            <a href="https://youtu.be/hXTcaBiYYEA" data-yt-play aria-label="Play the video: Why Apple Can&#x27;t Make Enough iPhone Duos (9 minutes 7 seconds)">
               <img src="/assets/img/explained/iphone-duo.jpg" width="1280" height="720" alt="An open iPhone Duo with its hinge line circled in amber, next to the words 1 bad part, out of 100+.">
               <span class="player__btn">Play · 9:07</span>
             </a>
@@ -152,16 +243,16 @@
         <section class="xsection" aria-labelledby="ch-title" style="margin-top:40px">
           <h2 id="ch-title" class="xsection__title">Chapters</h2>
           <ol class="chapters">
-        <li><a href="https://www.youtube.com/@Modus_Lab" data-yt-start="0"><span class="chapters__t">0:00</span><span class="chapters__name">$2,000 and sold out</span><span class="chapters__go">Play</span></a></li>
-        <li><a href="https://www.youtube.com/@Modus_Lab" data-yt-start="68"><span class="chapters__t">1:08</span><span class="chapters__name">The 100-part hinge</span><span class="chapters__go">Play</span></a></li>
-        <li><a href="https://www.youtube.com/@Modus_Lab" data-yt-start="129"><span class="chapters__t">2:09</span><span class="chapters__name">Glass you can roll like paper</span><span class="chapters__go">Play</span></a></li>
-        <li><a href="https://www.youtube.com/@Modus_Lab" data-yt-start="195"><span class="chapters__t">3:15</span><span class="chapters__name">Pages of a book, and the crease</span><span class="chapters__go">Play</span></a></li>
-        <li><a href="https://www.youtube.com/@Modus_Lab" data-yt-start="236"><span class="chapters__t">3:56</span><span class="chapters__name">Tolerance stack-up</span><span class="chapters__go">Play</span></a></li>
-        <li><a href="https://www.youtube.com/@Modus_Lab" data-yt-start="284"><span class="chapters__t">4:44</span><span class="chapters__name">The yield maths</span><span class="chapters__go">Play</span></a></li>
-        <li><a href="https://www.youtube.com/@Modus_Lab" data-yt-start="356"><span class="chapters__t">5:56</span><span class="chapters__name">The honest part: the 60% report</span><span class="chapters__go">Play</span></a></li>
-        <li><a href="https://www.youtube.com/@Modus_Lab" data-yt-start="403"><span class="chapters__t">6:43</span><span class="chapters__name">Rumours and delivery dates</span><span class="chapters__go">Play</span></a></li>
-        <li><a href="https://www.youtube.com/@Modus_Lab" data-yt-start="437"><span class="chapters__t">7:17</span><span class="chapters__name">Samsung took seven generations</span><span class="chapters__go">Play</span></a></li>
-        <li><a href="https://www.youtube.com/@Modus_Lab" data-yt-start="484"><span class="chapters__t">8:04</span><span class="chapters__name">Marketing, or a ramp?</span><span class="chapters__go">Play</span></a></li>
+        <li><a href="https://youtu.be/hXTcaBiYYEA?t=0" data-yt-start="0"><span class="chapters__t">0:00</span><span class="chapters__name">$2,000 and sold out</span><span class="chapters__go">Play</span></a></li>
+        <li><a href="https://youtu.be/hXTcaBiYYEA?t=68" data-yt-start="68"><span class="chapters__t">1:08</span><span class="chapters__name">The 100-part hinge</span><span class="chapters__go">Play</span></a></li>
+        <li><a href="https://youtu.be/hXTcaBiYYEA?t=129" data-yt-start="129"><span class="chapters__t">2:09</span><span class="chapters__name">Glass you can roll like paper</span><span class="chapters__go">Play</span></a></li>
+        <li><a href="https://youtu.be/hXTcaBiYYEA?t=195" data-yt-start="195"><span class="chapters__t">3:15</span><span class="chapters__name">Pages of a book, and the crease</span><span class="chapters__go">Play</span></a></li>
+        <li><a href="https://youtu.be/hXTcaBiYYEA?t=236" data-yt-start="236"><span class="chapters__t">3:56</span><span class="chapters__name">Tolerance stack-up</span><span class="chapters__go">Play</span></a></li>
+        <li><a href="https://youtu.be/hXTcaBiYYEA?t=284" data-yt-start="284"><span class="chapters__t">4:44</span><span class="chapters__name">The yield maths</span><span class="chapters__go">Play</span></a></li>
+        <li><a href="https://youtu.be/hXTcaBiYYEA?t=356" data-yt-start="356"><span class="chapters__t">5:56</span><span class="chapters__name">The honest part: the 60% report</span><span class="chapters__go">Play</span></a></li>
+        <li><a href="https://youtu.be/hXTcaBiYYEA?t=403" data-yt-start="403"><span class="chapters__t">6:43</span><span class="chapters__name">Rumours and delivery dates</span><span class="chapters__go">Play</span></a></li>
+        <li><a href="https://youtu.be/hXTcaBiYYEA?t=437" data-yt-start="437"><span class="chapters__t">7:17</span><span class="chapters__name">Samsung took seven generations</span><span class="chapters__go">Play</span></a></li>
+        <li><a href="https://youtu.be/hXTcaBiYYEA?t=484" data-yt-start="484"><span class="chapters__t">8:04</span><span class="chapters__name">Marketing, or a ramp?</span><span class="chapters__go">Play</span></a></li>
           </ol>
         </section>
 
